@@ -1,0 +1,571 @@
+#ifndef APSTUDIO_INVOKED
+
+CREATEPROCESS_MANIFEST_RESOURCE_ID RT_MANIFEST "res\\Transliterator.exe.manifest"
+
+#define SUBLANG_LOC                     0x20
+#define SUBLANG_LOC2                    0x21
+
+/////////////////////////////////////////////////////////////////////////////
+// Russian resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_RUS)
+#ifdef _WIN32
+LANGUAGE LANG_RUSSIAN,(SUBLANG_DEFAULT+SUBLANG_LOC)
+#pragma code_page(1251)
+#endif //_WIN32
+
+STRINGTABLE
+BEGIN
+	IDR_TRANSLITERATOR		"Транслитератор"
+	IDD_ABOUT				"О программе"
+	IDD_TRANSLATEFILES		"Перевод Файлов"
+	IDD_OPTIONS				"Опции"
+	IDD_TRANSLATION			"Перевод"
+	IDC_STRNSTEXT			"Транслит"
+	IDC_SRUSTEXT			"Русский"
+	IDC_SPROFILE			"Профиль"
+	IDC_TRANSLATION			""
+	IDC_PROFILE				""
+	ID_APP_EXIT				"Выход\tAlt+F4"
+	ID_EDIT_UNDO		    "Отменить\tCtrl+Z"
+	ID_EDIT_REDO		    "Повторить\tCtrl+Y"
+	ID_EDIT_CUT		    	"Вырезать\tCtrl+X"
+	ID_EDIT_COPY			"Копировать\tCtrl+C"
+	ID_EDIT_PASTE			"Вставить\tCtrl+V"
+	ID_EDIT_CLEAR			"Удалить\tDel"
+	ID_EDIT_CLEAR_ALL		"Удалить Все"
+	ID_EDIT_SELECT_ALL		"Выделить Все\tCtrl+A"
+	ID_EDIT_IGNORE_INSERT	"Вставить\tAlt+Shift+I"
+	ID_EDIT_IGNORE_REMOVE	"Удалить\tAlt+Shift+R"
+	ID_EDIT_COPY_TRNSTORUS	"Транслит в русский\tCtrl+Shift+T"
+	ID_EDIT_COPY_RUSTOTRNS	"Русский в транслит\tCtrl+Shift+R"
+	ID_VIEW_LANGUAGE_ENGLISH "English\tCtrl+F1"
+	ID_VIEW_LANGUAGE_RUSSIAN "Русский\tCtrl+F2"
+	ID_VIEW_LANGUAGE_TRANSLIT "Translit\tCtrl+F3"
+	ID_VIEW_CONTROLS_WRAPTEXT "Перенос текста\tCtrl+Shift+W"
+	ID_VIEW_CONTROLS_SCROLLTEXT "Прокрутка текста\tCtrl+Shift+S"
+	ID_VIEW_CONTROLS_AUTOTRANSLITERATION "Авто Транслитерация\tCtrl+Shift+A"
+	ID_VIEW_CONTROLS_AUTOIGNORE "Авто Игнорирование\tCtrl+Shift+G"
+	ID_TOOLS_TRANSLATION	"Перевод...\tF3"
+	ID_TOOLS_TRANSLATEFILES "Перевод Файлов...\tF4"
+	ID_TOOLS_OPTIONS		"Опции...\tF2"
+	ID_APP_ABOUT			"О программе...\tF1"
+	IDC_SABOUT             	"Программа для работы с русскими (кириллическими) буквами и перевода русских букв в транслит и наоборот.\r\nКраткое описание:\r\nПеревод в обоих направлениях (translit в русский, русский в translit).\r\nРазличные профили транслитерации:\r\n - translit  >  русский, русский  >  translit\r\n- qwerty  >  йцукен, йцукен  >  qwerty\r\n- Русский  >  CuMBo/\bHblu`, CuMBo/\bHblu`  >  Русский\r\n- Пользовательский  >  Пользовательский\r\nСимволы игнорирования перевода (после установки такого символа, указанная часть текста не транслитеруются).\r\nВызов программы с помощью горячей клавиши: показ/скрытие, автоматическая транслитерация.\r\nВозможность Транслитерации файлов (название файла или папки, содержание текста, MP3 тэги)\r\nВозможность изменения параметров транслитерации (символов перевода, игнорирования), профилей транслитерации и горячих клавиш на свой вкус.\r\nСворачивание в иконку , а также настройки показа и скрытия иконки в системной панели.\r\nЯзыки интерфейса: English, Русский и Translit\r\nМинимальный требования:\r\nWindows 95 и RichEdit версии 3.0 (входит в состав Internet Explorer 5.7 и выше)\r\nЭта программа бесплатна и предоставлена ""КАК-ЕСТЬ"".\r\nЯ не несу никакой ответсвенности за ушерб , который может быть нанесен.\r\nБлагодарности :\r\nMyxamore6e , DnAp и Shark.\r\n\r\nNN."
+	IDC_SABOUTPROGRAM		"Транслитератор 5.7 Copyright (C) 2003 - 2004"
+	IDC_EMAIL               "Эл.Почта : nn-mail@bk.ru"
+	IDC_SITE                "Сайт : http://our-site.nm.ru"
+	IDC_TRNSTORUS			"Транслит в Русский"
+	IDC_RUSTOTRNS			"Русский в Транслит"
+	IDC_SPATH				"Путь"
+	IDC_BROWSE				"..."
+	IDC_SFOLDER			    "Папка"
+	IDC_FILES				"Файлы"
+	IDC_FOLDERS			    "Папки"
+	IDC_SUBFOLDERS		    "Папки в выбранной папке"
+	IDC_SELFOLDER		    "Выбранная Папка"
+	IDC_SFILE				"Файл"
+	IDC_NAME				"Имя"
+	IDC_ENTRY				"Содержание"
+	IDC_MP3TAGS				"MP3 Теги"
+	IDC_SDIRECTION			"Направление"
+	IDC_TRANSLATE			"Перевод"
+	IDC_CLOSE				"Закрыть"
+	IDC_SNAME				"Название :"
+	IDC_STRANSLIT			"Транслит :"
+	IDC_SRUSSIAN			"Русский :"
+	IDC_ADD					"Добавить"
+	IDC_REMOVE				"Удалить"
+	IDC_CLEAR				"Очистить"
+	IDC_SIGNORE				"Игнорирование"
+	IDC_STRANSLIT2			"Транслит :"
+	IDC_SRUSSIAN2			"Русский :"
+	IDC_SBEGIN				"От :"
+	IDC_SEND				"До :"
+	IDC_SBEGIN2				"От :"
+	IDC_SEND2				"До :"
+	IDC_SCOPYPROFILE		"Копировать Из"
+	IDC_COPY				"Копировать"
+	IDC_SIN					"В"
+	IDC_RESET				"Сброс"
+	IDC_RESETALL			"Сбросить все"
+	IDC_SRESET				"Сброс"
+	ID_SHOW					"Показать"
+	ID_HIDE					"Скрыть"
+	IDC_APPLY				"Применить"
+	IDOK					"ОК"
+	IDCANCEL				"Отмена"
+	IDC_STRANSLATESYMBOLS	"Символы перевода"
+	IDC_SVIEW				"Вид"
+	IDC_SHOWTRAYICON		"Системная иконка"
+	IDC_SHOWTASKBAR			"Панель Задач"
+	IDC_TOPMOST				"Поверх всех окон"
+	IDC_SFONTS				"Шрифты"
+	IDC_FONTTRNS			"Транслит"
+	IDC_FONTRUS				"Русский"
+	IDC_FONTTRANSLATION		"Перевод"
+	IDC_SLOADONSTARTUP		"Запуск при загрузке"
+	IDC_LOADSHOWN			"Показывать"
+	IDC_LOADHIDDEN			"Скрывать"
+	IDC_LOADNO				"Не загружать"
+	IDC_SHOTKEYS			"Горячие клавиши"
+	IDC_SACTION				"Действие :"
+	IDC_SKEY				"Клавиша :"
+	IDC_ACTION				"Транслит в Русский\nРусский в Транслит\nАвто Перевод\nПоказать/Скрыть Программу\nКопировать в Транслит\nКопировать в Русский\n"
+	IDC_SAUTOTRANSLATION	"Авто Перевод"
+	IDC_COPYIGNORE			"Копировать игнорирование"
+	IDC_SLOADSAVE			"Загрузка/Сохранение"
+	IDC_LOAD				"Загрузить"
+	IDC_SAVE				"Сохранить"
+	IDC_STEXT				"Текст :"
+END
+
+#endif    // Russian resources
+/////////////////////////////////////////////////////////////////////////////
+
+/////////////////////////////////////////////////////////////////////////////
+// Russian resources
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_RUS)
+#ifdef _WIN32
+LANGUAGE LANG_RUSSIAN,(SUBLANG_DEFAULT+SUBLANG_LOC2)
+#pragma code_page(1251)
+#endif //_WIN32
+
+STRINGTABLE
+BEGIN
+	IDR_TRANSLITERATOR "Главная\nПравка\nИгнорирование\nКопирование\nВид\nПрофиль\nЯзык\nЭлементы управления\nУтилиты\nПомощь"
+	IDR_TRAYICON	"1\nПрофиль\nЯзык"
+	IDR_EDIT	"1\nИгнорирование\nКопирование\nПрофиль\nЯзык\nЭлементы управления\nУтилиты"
+END
+
+#endif    // Russian resources
+/////////////////////////////////////////////////////////////////////////////
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH,(SUBLANG_ENGLISH_US+SUBLANG_LOC)
+#pragma code_page(1252)
+#endif //_WIN32
+
+STRINGTABLE
+BEGIN
+	IDR_TRANSLITERATOR		"Transliterator"
+	IDD_TRANSLATEFILES		"Translate Files"
+	IDD_ABOUT				"About"
+	IDD_TRANSLATION			"Translation"
+	IDD_OPTIONS				"Options"
+	IDC_STRNSTEXT			"Translit"
+	IDC_SRUSTEXT			"Russian"
+	IDC_SPROFILE			"Profile"
+	IDC_PROFILE				""
+	IDC_TRANSLATION			""
+	ID_APP_EXIT				"Exit\tAlt+F4"
+	ID_EDIT_UNDO            "Undo\tCtrl+Z"
+	ID_EDIT_REDO            "Redo\tCtrl+Y"
+	ID_EDIT_CUT             "Cut\tCtrl+X"
+	ID_EDIT_COPY            "Copy\tCtrl+C"
+	ID_EDIT_PASTE           "Paste\tCtrl+V"
+	ID_EDIT_CLEAR           "Delete\tDel"
+	ID_EDIT_CLEAR_ALL       "Delete All"
+	ID_EDIT_SELECT_ALL      "Select All\tCtrl+A"
+	ID_EDIT_IGNORE_INSERT	"Insert\tAlt+Shift+I"
+	ID_EDIT_IGNORE_REMOVE	"Remove\tAlt+Shift+R"
+	ID_EDIT_COPY_TRNSTORUS	"Translit to russian\tAlt+Shift+T"
+	ID_EDIT_COPY_RUSTOTRNS	"Russian to translit\tAlt+Shift+R"
+	ID_VIEW_LANGUAGE_ENGLISH "English\tCtrl+F1"
+	ID_VIEW_LANGUAGE_RUSSIAN "Русский\tCtrl+F2"
+	ID_VIEW_LANGUAGE_TRANSLIT "Translit\tCtrl+F3"
+	ID_VIEW_CONTROLS_WRAPTEXT "Wrap text\tCtrl+Shift+W"
+	ID_VIEW_CONTROLS_SCROLLTEXT "Scrol text\tCtrl+Shift+S"
+	ID_VIEW_CONTROLS_AUTOTRANSLITERATION "Auto Transliteration\tCtrl+Shift+A"
+	ID_VIEW_CONTROLS_AUTOIGNORE "Auto Ignore\tCtrl+Shift+G"
+	ID_TOOLS_TRANSLATION	"Translation...\tF3"
+	ID_TOOLS_TRANSLATEFILES "Translate Files...\tF4"
+	ID_TOOLS_OPTIONS		"Options...\tF2"
+	ID_APP_ABOUT			"About...\tF1"
+	IDC_SABOUT				"This program works with russian (cyrillic) letters and translation russian letters into translit and translit letters into russian\r\nShort review:\r\nTranslation two-way (translit into russian, russian into translit).\r\nDifferent profiles of transliteration:\r\n- translit > russian, russian > translit\r\n- qwerty > йцукен, йцукен  >  qwerty\r\n- Русский  >  CuMBo/\bHblu`, CuMBo/\bHblu`  >  Русский\r\n- User  >  User\r\nIgnore translation symbols (after insertion this symbol some part of will no be transliterated\r\nHot Keys: show/hide, auto transliteration\r\nTransliteration files (file name or folder, entry of the file, MP3 tags)\r\nOptions for change: (transliteration, ignore), transliteration profiles and hot keys\r\nMinimization to tray icon and option to show or hide tray icon\r\nInterface languages: English, Русский and Translit\r\nMinimal requirements\r\nWindows 95 and RichEdit version 3.0 (Internet Explorer 5.7 and higher)\r\nThis program is freeware and provided ""AS-IS"".\r\nI take no responsibility for any damage this program cause.\r\nSpecial thanks to :\r\nMyxamore6e , DnAp and Shark.\r\n\r\nNN."
+	IDC_SABOUTPROGRAM		"Transliterator 5.7 Copyright (C) 2003 - 2004"
+	IDC_EMAIL               "E-mail : nn-mail@bk.ru"
+	IDC_SITE                "Site : http://our-site.nm.ru"
+	IDC_TRNSTORUS			"Translit to Russian"
+	IDC_RUSTOTRNS			"Russian to Translit"
+	IDC_SPATH				"Path"
+	IDC_BROWSE				"..."
+	IDC_SFOLDER			    "Folder"
+	IDC_FILES				"Files"
+	IDC_FOLDERS			    "Folders"
+	IDC_SUBFOLDERS		    "Folders in selected folder"
+	IDC_SELFOLDER		    "Selected Folder"
+	IDC_SFILE				"File"
+	IDC_NAME				"Name"
+	IDC_ENTRY				"Entry"
+	IDC_MP3TAGS				"MP3 Tags"
+	IDC_SDIRECTION			"Direction"
+	IDC_TRANSLATE			"Translate"
+	IDC_CLOSE				"Close"
+	IDC_SNAME				"Name :"
+	IDC_STRANSLIT			"Translit :"
+	IDC_SRUSSIAN			"Russian :"
+	IDC_ADD					"Add"
+	IDC_REMOVE				"Remove"
+	IDC_CLEAR				"Clear"
+	IDC_SIGNORE				"Ignore"
+	IDC_STRANSLIT2			"Translit :"
+	IDC_SRUSSIAN2			"Russian :"
+	IDC_SBEGIN				"Begin :"
+	IDC_SEND				"End :"
+	IDC_SBEGIN2				"Begin :"
+	IDC_SEND2				"End :"
+	IDC_SCOPYPROFILE		"Copy From"
+	IDC_COPY				"Copy"
+	IDC_SIN					"Into"
+	IDC_RESET				"Reset"
+	IDC_RESETALL			"Reset all"
+	IDC_SRESET				"Reset"
+	ID_SHOW					"Show"
+	ID_HIDE					"Hide"
+	IDC_APPLY				"Apply"
+	IDOK					"OK"
+	IDCANCEL				"Cancel"
+	IDC_STRANSLATESYMBOLS	"Translate Symbols"
+	IDC_SVIEW				"View"
+	IDC_SHOWTRAYICON		"System icon"
+	IDC_SHOWTASKBAR			"TaskBar"
+	IDC_TOPMOST				"Top Most"
+	IDC_SFONTS				"Fonts"
+	IDC_FONTTRNS			"Translit"
+	IDC_FONTRUS				"Russian"
+	IDC_FONTTRANSLATION		"Translation"
+	IDC_SLOADONSTARTUP		"Load on startup"
+	IDC_LOADSHOWN			"Shown"
+	IDC_LOADHIDDEN			"Hidden"
+	IDC_LOADNO				"No load"
+	IDC_SHOTKEYS			"Hot Keys"
+	IDC_SACTION				"Action :"
+	IDC_SKEY				"Key :"
+	IDC_ACTION				"Translit to Russian\nRussian to Translit\nAuto Translation\nShow/Hide Program\nCopy to Translit\nCopy to Russian\n"
+	IDC_SAUTOTRANSLATION	"Auto Translation"
+	IDC_COPYIGNORE			"Copy ignore"
+	IDC_SLOADSAVE			"Load/Save"
+	IDC_LOAD				"Load"
+	IDC_SAVE				"Save"
+	IDC_STEXT				"Text :"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH,(SUBLANG_ENGLISH_US+SUBLANG_LOC2)
+#pragma code_page(1252)
+#endif //_WIN32
+
+STRINGTABLE
+BEGIN
+	IDR_TRANSLITERATOR "Main\nEdit\nIgnore\nCopy\nView\nProfile\nLanguage\nControls\nTools\nHelp"
+	IDR_TRAYICON	"1\nProfile\nLanguage"
+	IDR_EDIT	"1\nIgnore\nCopy\nProfile\nLanguage\nControls\nTools"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+/////////////////////////////////////////////////////////////////////////////
+// Translit resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_RUSSIAN, (SUBLANG_DEFAULT+4)
+#pragma code_page(1251)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDR_TRANSLITERATOR      "Transliterator"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_NEW             "Sozdanie novogo okna\nSozdat'"
+    ID_FILE_OPEN            "Otkry'tie susch'estvuesch'ego dokumenta\nOtkry't'"
+    ID_FILE_CLOSE           "Zakry'tie aktivnogo okna\nZakry't'"
+    ID_FILE_SAVE            "Sohranenie aktivnogo dokumenta\nSohranit'"
+    ID_FILE_SAVE_AS         "Sohranenie aktivnogo dokumenta pod drugim imenem\nSohranit' kak"
+    ID_FILE_PAGE_SETUP      "Izmenenie parametrov stranicy'\nParametry' stranicy'"
+    ID_FILE_PRINT_SETUP     "Smena prontera i izmenenie ego parametrov\nNastroyka printera"
+    ID_FILE_PRINT           "Pechat' aktivnogo dokumenta\nPechat'"
+    ID_FILE_PRINT_PREVIEW   "Prosmotr pechataemogo materiala v polnostranichnom rejime\nPredvaritel'ny'y prosmotr"
+END
+
+STRINGTABLE 
+BEGIN
+    ATL_IDS_IDLEMESSAGE     " "
+END
+
+STRINGTABLE 
+BEGIN
+    ID_EDIT_IGNORE_REMOVE   "Udalenie simvolov ignorirovaniya\nUdalit' ignorirovanie"
+    ID_EDIT_COPY_TRNSTORUS  "Kopirovanie teksta iz okna translita v russkiy\nKopirovat' translit v russkiy"
+    ID_EDIT_COPY_RUSTOTRNS  "Kopirovanie teksta iz russkogo okna v translit\nKopirovat' russkiy v translit"
+    ID_VIEW_LANGUAGE_ENGLISH "Angliyskiy yazy'k\nAngliyskiy yazy'k"
+    ID_VIEW_LANGUAGE_RUSSIAN "Russkiy yazy'k\nRusskiy yazy'k"
+    ID_VIEW_LANGUAGE_TRANSLIT "Translit\nTranslit"
+    ID_VIEW_CONTROLS_WRAPTEXT "Perenos teksta\nPerenosit' tekst"
+    ID_VIEW_CONTROLS_SCROLLTEXT "Prokrutka teksta\nProkruchivat' tekst"
+    ID_VIEW_CONTROLS_AUTOTRANSLITERATION 
+                            "Perevodit' tekst\nAvto Transliteraciya"
+	ID_VIEW_CONTROLS_AUTOIGNORE "Ignorirovat' tekst\nAvto Ignorirovanie"
+    ID_TOOLS_TRANSLATION    "Pokazat' ili skry't' okno perevoda\nPerevod"
+    ID_TOOLS_TRANSLATEFILES "Pokazat' ili skry't'okno perevoda faylov\nPerevod Faylov"
+    ID_TOOLS_OPTIONS        "Pokazat' ili skry't'okno opciy\nOpcii"
+    ID_SHOW                 "Pokazat' okno prilojeniya\nPokazat'"
+    ID_HIDE                 "Skry't' okno prilojeniya\nSkry't'"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_APP_ABOUT            "Vy'vod svedeniy o programme\nO programme"
+    ID_APP_EXIT             "Zavershenie raboty' s prilojeniem\nVy'hod"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_NEXT_PANE            "Perehod k sleduyusch'ey paneli okna\nSleduyusch'aya panel'"
+    ID_PREV_PANE            "Perehod k predy'dusch'ey paneli okna\nPredy'dusch'aya panel'"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_WINDOW_NEW           "Otkry't' drugoe okno\nNovoe okno"
+    ID_WINDOW_ARRANGE       "Uporyadochit' znachki v nijney chasti okna\nUporyadochit' znachki"
+    ID_WINDOW_CASCADE       "Uporyadochit' okna takim obrazom, chtoby' oni perekry'valis'\nKaskadirovat' okna"
+    ID_WINDOW_TILE_HORZ     "Uporyadochit' okna po gorizontali\nUporyadochit' po gorizontali"
+    ID_WINDOW_TILE_VERT     "Uporyadochit' okna po vertikali\nUporyadochit' po vertikali"
+    ID_WINDOW_SPLIT         "Razbit' aktivnoe okno na paneli\nRazbit'"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_EDIT_CLEAR           "Udalenie vy'delenongo fragmenta\nUdalit'"
+    ID_EDIT_CLEAR_ALL       "Udalit' vse\nUdalit' vse"
+    ID_EDIT_COPY            "Kopirovanie vy'delennogo fragmenta v bufer obmena\nKopirovat' v buffer"
+    ID_EDIT_CUT             "Udalenie vy'delennogo fragmenta v bufer obmena\nUdalit' v buffer"
+    ID_EDIT_FIND            "Poisk zadannogo tekstaNayti"
+    ID_EDIT_PASTE           "Vstavka soderjimogo buffera obmena\nVstavit'"
+    ID_EDIT_REPEAT          "Povtorit' poslednee deystvie\nPovtorit'"
+    ID_EDIT_REPLACE         "Zamena teksta\nZamenit'"
+    ID_EDIT_SELECT_ALL      "Vy'delenie vsego dokumenta celikom\nVy'delit' vse"
+    ID_EDIT_UNDO            "Otmena poslednego vy'polnennogo deystviya\nOtmena"
+    ID_EDIT_REDO            "Vernut' rezul'tat poslednego otmenennogo deystviya\nVernut'"
+END
+
+STRINGTABLE 
+BEGIN
+    ATL_IDS_SCSIZE          "Izmenenie razmerov okna"
+    ATL_IDS_SCMOVE          "Izmenenie polojeniya okna"
+    ATL_IDS_SCMINIMIZE      "Minimizaciya okna"
+    ATL_IDS_SCMAXIMIZE      "Maksimizaciya okna"
+    ATL_IDS_SCNEXTWINDOW    "Perehod k sleduyusch'emu oknu"
+    ATL_IDS_SCPREVWINDOW    "Perehod k predy'dusch'emu oknu"
+    ATL_IDS_SCCLOSE         "Zakry'tie aktivnogo okna"
+END
+
+STRINGTABLE 
+BEGIN
+    ATL_IDS_SCRESTORE       "Vosstanovlenie razmerov okna"
+    ATL_IDS_SCTASKLIST      "Aktivizaciya spiska zadach"
+    ATL_IDS_MDICHILD        "Aktivizaciya dannogo okna"
+END
+
+STRINGTABLE 
+BEGIN
+    ATL_IDS_MRU_FILE        "Otkry't' e`tot dokument"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_ERROR               "Oshibka"
+    IDS_HELP                "Pomosch''"
+    IDS_TRNSTORUS           "Translit v Russkiy"
+    IDS_RUSTOTRNS           "Russkiy v Translit"
+    IDS_NOTRANSLATE         "Net perevoda"
+    IDS_GENERAL             "Obsch'ee"
+    IDS_HOTKEYS             "Goryachie klavishi"
+    IDS_PROFILE             "Profil'"
+    IDS_IGNORE              "Ignorirovanie"
+	IDS_TRANSLIT            "Translit"
+    IDS_RUSSIAN             "Russkiy"
+	IDS_ALL					"Vse"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_EDIT_IGNORE_INSERT   "Vstavka simvolov ignorirovaniya\nVstavit' ignorirovanie"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_PROFILE1             "Profil' 1"
+    ID_PROFILE2             "Profil' 2"
+    ID_PROFILE3             "Profil' 3"
+    ID_PROFILE4             "Profil' 4"
+    ID_PROFILE5             "Profil' 5"
+    ID_PROFILE6             "Profil' 6"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_DONE                "Gotovo"
+END
+
+#endif    // Translit resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Translit resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_RUSSIAN,(SUBLANG_DEFAULT+4+SUBLANG_LOC)
+#pragma code_page(1251)
+#endif //_WIN32
+
+STRINGTABLE
+BEGIN
+	IDR_TRANSLITERATOR		"Transliterator"
+	IDD_ABOUT				"O programme"
+	IDD_TRANSLATEFILES		"Perevod Faylov"
+	IDD_OPTIONS				"Opcii"
+	IDD_TRANSLATION			"Perevod"
+	IDC_STRNSTEXT			"Translit"
+	IDC_SRUSTEXT			"Russkiy"
+	IDC_SPROFILE			"Profil'"
+	IDC_TRANSLATION			""
+	IDC_PROFILE				""
+	ID_APP_EXIT				"Vy'hod\tAlt+F4"
+	ID_EDIT_UNDO		    "Otmenit'\tCtrl+Z"
+	ID_EDIT_REDO		    "Povtorit'\tCtrl+Y"
+	ID_EDIT_CUT		    	"Vy'rezat'\tCtrl+X"
+	ID_EDIT_COPY			"Kopirovat'\tCtrl+C"
+	ID_EDIT_PASTE			"Vstavit'\tCtrl+V"
+	ID_EDIT_CLEAR			"Udalit'\tDel"
+	ID_EDIT_CLEAR_ALL		"Udalit' Vse"
+	ID_EDIT_SELECT_ALL		"Vy'delit' Vse\tCtrl+A"
+	ID_EDIT_IGNORE_INSERT	"Vstavit'\tAlt+Shift+I"
+	ID_EDIT_IGNORE_REMOVE	"Udalit'\tAlt+Shift+R"
+	ID_EDIT_COPY_TRNSTORUS	"Translit v russkiy\tCtrl+Shift+T"
+	ID_EDIT_COPY_RUSTOTRNS	"Russkiy v translit\tCtrl+Shift+R"
+	ID_VIEW_LANGUAGE_ENGLISH "English\tCtrl+F1"
+	ID_VIEW_LANGUAGE_RUSSIAN "Русский\tCtrl+F2"
+	ID_VIEW_LANGUAGE_TRANSLIT "Translit\tCtrl+F3"
+	ID_VIEW_CONTROLS_WRAPTEXT "Perenos teksta\tCtrl+Shift+W"
+	ID_VIEW_CONTROLS_SCROLLTEXT "Prokrutka teksta\tCtrl+Shift+S"
+	ID_VIEW_CONTROLS_AUTOTRANSLITERATION "Avto Transliteraciya\tCtrl+Shift+A"
+	ID_VIEW_CONTROLS_AUTOIGNORE "Avto Ignorirovanie\tCtrl+Shift+G"
+	ID_TOOLS_TRANSLATION	"Perevod...\tF3"
+	ID_TOOLS_TRANSLATEFILES "Perevod Faylov...\tF4"
+	ID_TOOLS_OPTIONS		"Opcii...\tF2"
+	ID_APP_ABOUT			"O programme...\tF1"
+	IDC_SABOUT             	"Programma dlya raboty' s russkimi (kirillicheskimi) bukvami i perevoda russkih bukv v translit i naoborot.\r\nKratkoe opisanie:\r\nPerevod v oboih napravleniyah (translit v russkiy, russkiy v translit).\r\nRazlichny'e profili transliteracii:\r\n - translit  >  russkiy, russkiy  >  translit\r\n- qwerty  >  ycuken, ycuken  >  qwerty\r\n- Russkiy  >  CuMBo/\bHblu`, CuMBo/\bHblu`  >  Russkiy\r\n- Pol'zovatel'skiy  >  Pol'zovatel'skiy\r\nSimvoly' ignorirovaniya perevoda (posle ustanovki takogo simvola, ukazannaya chast' teksta ne transliteruyutsya).\r\nVy'zov programmy' s pomosch''yu goryachey klavishi: pokaz/skry'tie, avtomaticheskaya transliteraciya.\r\nVozmojnost' Transliteracii faylov (nazvanie fayla ili papki, soderjanie teksta, MP3 te`gi)\r\nVozmojnost' izmeneniya parametrov transliteracii (simvolov perevoda, ignorirovaniya), profiley transliteracii i goryachih klavish na svoy vkus.\r\nSvorachivanie v ikonku , a takje nastroyki pokaza i skry'tiya ikonki v sistemnoy paneli.\r\nYAzy'ki interfeysa: English, Russkiy i Translit\r\nMinimal'ny'y trebovaniya:\r\nWindows 95 i RichEdit versii 3.0 (vhodit v sostav Internet Explorer 5.7 i vy'she)\r\nE`ta programma besplatna i predostavlena ""KAK-EST''"".\r\nYA ne nesu nikakoy otvetsvennosti za usherb , kotory'y mojet by't' nanesen.\r\nBlagodarnosti :\r\nMyxamore6e , DnAp i Shark.\r\n\r\nNN."
+	IDC_SABOUTPROGRAM		"Transliterator 5.7 Copyright (C) 2003 - 2004"
+	IDC_EMAIL               "E`l.Pochta : nn-mail@bk.ru"
+	IDC_SITE                "Sayt : http://our-site.nm.ru"
+	IDC_TRNSTORUS			"Translit v Russkiy"
+	IDC_RUSTOTRNS			"Russkiy v Translit"
+	IDC_SPATH				"Put'"
+	IDC_BROWSE				"..."
+	IDC_SFOLDER			    "Papka"
+	IDC_FILES				"Fayly'"
+	IDC_FOLDERS			    "Papki"
+	IDC_SUBFOLDERS		    "Papki v vy'brannoy papke"
+	IDC_SELFOLDER		    "Vy'brannaya Papka"
+	IDC_SFILE				"Fayl"
+	IDC_NAME				"Imya"
+	IDC_ENTRY				"Soderjanie"
+	IDC_MP3TAGS				"MP3 Tegi"
+	IDC_SDIRECTION			"Napravlenie"
+	IDC_TRANSLATE			"Perevod"
+	IDC_CLOSE				"Zakry't'"
+	IDC_SNAME				"Nazvanie :"
+	IDC_STRANSLIT			"Translit :"
+	IDC_SRUSSIAN			"Russkiy :"
+	IDC_ADD					"Dobavit'"
+	IDC_REMOVE				"Udalit'"
+	IDC_CLEAR				"Ochistit'"
+	IDC_SIGNORE				"Ignorirovanie"
+	IDC_STRANSLIT2			"Translit :"
+	IDC_SRUSSIAN2			"Russkiy :"
+	IDC_SBEGIN				"Ot :"
+	IDC_SEND				"Do :"
+	IDC_SBEGIN2				"Ot :"
+	IDC_SEND2				"Do :"
+	IDC_SCOPYPROFILE		"Kopirovat' Iz"
+	IDC_COPY				"Kopirovat'"
+	IDC_SIN					"V"
+	IDC_RESET				"Sbros"
+	IDC_RESETALL			"Sbrosit' vse"
+	IDC_SRESET				"Sbros"
+	ID_SHOW					"Pokazat'"
+	ID_HIDE					"Skry't'"
+	IDC_APPLY				"Primenit'"
+	IDOK					"OK"
+	IDCANCEL				"Otmena"
+	IDC_STRANSLATESYMBOLS	"Simvoly' perevoda"
+	IDC_SVIEW				"Vid"
+	IDC_SHOWTRAYICON		"Sistemnaya ikonka"
+	IDC_SHOWTASKBAR			"Panel' Zadach"
+	IDC_TOPMOST				"Poverh vseh okon"
+	IDC_SFONTS				"SHrifty'"
+	IDC_FONTTRNS			"Translit"
+	IDC_FONTRUS				"Russkiy"
+	IDC_FONTTRANSLATION		"Perevod"
+	IDC_SLOADONSTARTUP		"Zapusk pri zagruzke"
+	IDC_LOADSHOWN			"Pokazy'vat'"
+	IDC_LOADHIDDEN			"Skry'vat'"
+	IDC_LOADNO				"Ne zagrujat'"
+	IDC_SHOTKEYS			"Goryachie klavishi"
+	IDC_SACTION				"Deystvie :"
+	IDC_SKEY				"Klavisha :"
+	IDC_ACTION				"Translit v Russkiy\nRusskiy v Translit\nAvto Perevod\nPokazat'/Skry't' Programmu\nKopirovat' v Translit\nKopirovat' v Russkiy\n"
+	IDC_SAUTOTRANSLATION	"Avto Perevod"
+	IDC_COPYIGNORE			"Kopirovat' ignorirovanie"
+	IDC_SLOADSAVE			"Zagruzka/Sohranenie"
+	IDC_LOAD				"Zagruzit'"
+	IDC_SAVE				"Sohranit'"
+	IDC_STEXT				"Tekst :"
+END
+
+#endif    // Translit resources
+/////////////////////////////////////////////////////////////////////////////
+
+/////////////////////////////////////////////////////////////////////////////
+// Translit resources
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_RUSSIAN,(SUBLANG_DEFAULT+4+SUBLANG_LOC2)
+#pragma code_page(1251)
+#endif //_WIN32
+
+STRINGTABLE
+BEGIN
+	IDR_TRANSLITERATOR "Glavnaya\nPravka\nIgnorirovanie\nKopirovanie\nVid\nProfil'\nYAzy'k\nE`lementy' upravleniya\nUtility'\nPomosch''"
+	IDR_TRAYICON	"1\nProfil'\nYAzy'k"
+	IDR_EDIT	"1\nIgnorirovanie\nKopirovanie\nProfil'\nYAzy'k\nE`lementy' upravleniya\nUtility'"
+END
+
+#endif    // Translit resources
+/////////////////////////////////////////////////////////////////////////////
+
+#endif //!APSTUDIO_INVOKED

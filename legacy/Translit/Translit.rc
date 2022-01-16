@@ -1,0 +1,805 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "atlres.h"
+#include "Translit.rc2"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Neutral resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NEU)
+#ifdef _WIN32
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+#pragma code_page(1251)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_TRANSLIT ACCELERATORS 
+BEGIN
+    VK_F1,          ID_APP_ABOUT,           VIRTKEY, NOINVERT
+    "2",            ID_EDIT_NOTRANSLATE_CLEAR, VIRTKEY, SHIFT, CONTROL, 
+                                                    NOINVERT
+    "1",            ID_EDIT_NOTRANSLATE_SET, VIRTKEY, SHIFT, CONTROL, 
+                                                    NOINVERT
+    VK_F4,          ID_TOOLS_CHANGETRANSLATION, VIRTKEY, NOINVERT
+    VK_F2,          ID_TOOLS_OPTIONS,       VIRTKEY, NOINVERT
+    VK_F5,          ID_TOOLS_TRANSLATEFILES, VIRTKEY, NOINVERT
+    VK_F3,          ID_TOOLS_TRANSLATION,   VIRTKEY, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDR_TRANSLIT DIALOGEX 0, 0, 180, 180
+STYLE DS_SETFONT | WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_CAPTION | WS_SYSMENU | 
+    WS_THICKFRAME
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "Translit"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    LTEXT           "&English text :",IDC_SENGTEXT,5,5,170,8
+    LTEXT           "&Russian text :",IDC_SRUSTEXT,5,85,170,8
+    CONTROL         "",IDC_SSEPARATOR,"Static",SS_ETCHEDHORZ,0,0,174,1
+END
+
+IDD_ABOUT DIALOGEX 0, 0, 216, 124
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "&OK",IDOK,165,85,44,18
+    PUSHBUTTON      "&E-mail : nn-mail@bk.ru",IDC_EMAIL,5,85,150,13,BS_FLAT
+    PUSHBUTTON      "&Site : http://our-site.nm.ru",IDC_SITE,5,105,150,13,
+                    BS_FLAT
+    LTEXT           "This program is freeware and provided """"AS-IS"""".\nI take no responsibility for any damage this program cause.\nSpecial thanks to :\nMyxamore6e , Destroer and Shark.\n\nNN.",
+                    IDC_SABOUT,5,20,205,60,SS_SUNKEN
+    LTEXT           "Translit 4.0 Copyright (C) 2003 - 2004",
+                    IDC_SABOUTTRANSLIT,5,5,205,10,SS_SUNKEN
+END
+
+IDD_TRANSLATION DIALOGEX 0, 0, 97, 202
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU | 
+    WS_THICKFRAME
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "Translation"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_TRANSLATION,"RichEdit20A",ES_MULTILINE | 
+                    ES_READONLY | ES_NUMBER | WS_VSCROLL | WS_HSCROLL | 
+                    WS_TABSTOP,0,0,96,202
+END
+
+IDD_GENERALPAGE DIALOGEX 0, 0, 112, 101
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_CAPTION
+CAPTION "General"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    CONTROL         "&Exit",IDC_CLOSEEXIT,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP | WS_TABSTOP,10,15,43,10
+    CONTROL         "&To Tray",IDC_CLOSETOTRAY,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,57,15,43,10
+    CONTROL         "&Normal",IDC_MINIMIZENORMAL,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP | WS_TABSTOP,10,46,43,10
+    CONTROL         "T&o Tray",IDC_MINIMIZETOTRAY,"Button",
+                    BS_AUTORADIOBUTTON | WS_TABSTOP,57,46,46,10
+    CONTROL         "&Load on StartUp",IDC_LOADONSTARTUP,"Button",
+                    BS_AUTOCHECKBOX | BS_MULTILINE | WS_TABSTOP,10,77,90,8
+    GROUPBOX        "Close",IDC_SCLOSE,5,5,100,25
+    GROUPBOX        "Minimize",IDC_SMINIMIZE,5,35,100,25
+    GROUPBOX        "StartUp",IDC_SSTARTUP,5,66,100,25
+END
+
+IDD_LAYOUTPAGE DIALOGEX 0, 0, 148, 114
+STYLE DS_SETFONT | WS_CHILD | WS_CAPTION
+CAPTION "Layout"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    PUSHBUTTON      "&Eng Font",IDC_ENGFONT,13,16,50,14
+    PUSHBUTTON      "&Rus Font",IDC_RUSFONT,71,16,50,14
+    CONTROL         "Show when program is &shown",IDC_TRAYICONSHOWN,"Button",
+                    BS_AUTOCHECKBOX | BS_TOP | BS_MULTILINE | WS_TABSTOP,15,
+                    50,110,18
+    CONTROL         "Show when program is &hidden",IDC_TRAYICONHIDDEN,"Button",
+                    BS_AUTOCHECKBOX | BS_TOP | BS_MULTILINE | WS_TABSTOP,15,
+                    73,111,18
+    GROUPBOX        "Fonts",IDC_SFONTS,5,5,135,31
+    GROUPBOX        "TrayIcon",IDC_STRAYICON,5,39,135,59
+END
+
+IDD_HOTKEYSPAGE DIALOGEX 0, 0, 170, 125
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_CAPTION
+CAPTION "HotKeys"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_HOTKEYTRANSLATIONENGTORUS,"msctls_hotkey32",
+                    WS_BORDER | WS_TABSTOP,70,17,80,14
+    CONTROL         "",IDC_HOTKEYTRANSLATIONRUSTOENG,"msctls_hotkey32",
+                    WS_BORDER | WS_TABSTOP,70,37,80,14
+    CONTROL         "",IDC_HOTKEYSHOWTRANSLIT,"msctls_hotkey32",WS_BORDER | 
+                    WS_TABSTOP,70,75,80,14
+    CONTROL         "",IDC_HOTKEYHIDETRANSLIT,"msctls_hotkey32",WS_BORDER | 
+                    WS_TABSTOP,70,95,80,14
+    GROUPBOX        "Translation",IDC_STRANSLATION,5,5,155,55
+    LTEXT           "&Eng to Rus :",IDC_SENGTORUS,12,17,50,8
+    LTEXT           "&Rus to Eng :",IDC_SRUSTOENG,12,37,50,8
+    GROUPBOX        "Translit",IDC_STRANSLIT,5,63,155,50
+    LTEXT           "&Show :",IDC_SSHOW,12,75,50,8
+    LTEXT           "&Hide :",IDC_SHIDE,12,92,50,8
+END
+
+IDD_CHANGETRANSLATION DIALOGEX 0, 0, 150, 190
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Change Translation"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    COMBOBOX        IDC_ENG,30,15,35,60,CBS_DROPDOWN | CBS_AUTOHSCROLL | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_RUS,90,15,35,60,CBS_DROPDOWN | CBS_AUTOHSCROLL | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Eng to Rus",IDC_ENGTORUS,"Button",BS_AUTOCHECKBOX | 
+                    WS_DISABLED | WS_TABSTOP,10,30,55,10
+    PUSHBUTTON      "&Add",IDC_ADD,15,45,55,13
+    PUSHBUTTON      "Re&move",IDC_REMOVE,80,45,55,13
+    PUSHBUTTON      "&Clear",IDC_CLEAR,15,63,55,13
+    PUSHBUTTON      "Re&set",IDC_RESET,80,63,55,13
+    EDITTEXT        IDC_FROMENG,49,100,15,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_TOENG,90,100,15,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_FROMRUS,48,133,15,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_TORUS,90,133,15,14,ES_AUTOHSCROLL
+    CONTROL         "Copy ""&Not Translate"" symbols",IDC_COPYNOTTRANSLATE,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,155,136,8
+    DEFPUSHBUTTON   "&OK",IDOK,50,170,42,14
+    PUSHBUTTON      "&Cancel",IDCANCEL,100,170,42,14
+    LTEXT           "&Eng :",IDC_SENG,10,15,18,8
+    LTEXT           "&Rus :",IDC_SRUS,70,15,18,8
+    GROUPBOX        "Translate",IDC_STRANSLATE,5,5,140,75
+    GROUPBOX        "Not Translate",IDC_SNOTTRANSLATE,5,82,140,85
+    GROUPBOX        "Russian Text",IDC_SRUSTEXT,15,123,120,30
+    GROUPBOX        "English Text",IDC_SENGTEXT,15,91,120,30
+    LTEXT           "From :",IDC_SFROM1,23,102,22,8
+    LTEXT           "To :",IDC_STO1,73,102,14,8
+    LTEXT           "From :",IDC_SFROM2,22,135,22,8
+    LTEXT           "To :",IDC_STO2,72,135,14,8
+    CONTROL         "Rus to Eng",IDC_RUSTOENG,"Button",BS_AUTOCHECKBOX | 
+                    WS_DISABLED | WS_TABSTOP,80,30,55,10
+END
+
+IDD_TRANSLATEFILES DIALOGEX 0, 0, 158, 225
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Translate Files"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_PATH,10,14,120,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BROWSE,130,15,16,12
+    CONTROL         "&Files",IDC_FILES,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    10,40,125,10
+    CONTROL         "&Directories",IDC_DIRECTORIES,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,10,55,125,10
+    CONTROL         "&SubDirectories",IDC_SUBDIRECTORIES,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,10,70,125,10
+    CONTROL         "T&his Directory",IDC_THISDIRECTORY,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,10,85,125,10
+    CONTROL         "&Name",IDC_NAME,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    10,115,125,10
+    CONTROL         "&Entry",IDC_ENTRY,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    10,130,125,10
+    CONTROL         "&MP3 Tags",IDC_MP3TAGS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,10,145,125,10
+    CONTROL         "Eng to Rus",IDC_ENGTORUS,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP | WS_TABSTOP,10,171,125,10
+    CONTROL         "Rus to Eng",IDC_RUSTOENG,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,10,185,125,10
+    DEFPUSHBUTTON   "&Translate",IDC_TRANSLATE,40,205,50,14
+    PUSHBUTTON      "&Close",IDC_CLOSE,98,205,50,14
+    LTEXT           "&Path :",IDC_SPATH,10,1,129,8
+    GROUPBOX        "Directory",IDC_SDIRECTORY,5,30,145,70
+    GROUPBOX        "Direction",IDC_SDIRECTION,5,161,145,39
+    GROUPBOX        "File",IDC_SFILE,5,103,144,58
+END
+
+IDD_AUTOTRANSLATIONPAGE DIALOGEX 0, 0, 185, 81
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Auto Translation"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    LTEXT           "HotKey :",IDC_SHOTKEY,15,20,65,8
+    CONTROL         "",IDC_HOTKEYTRANSLATIONAUTO,"msctls_hotkey32",WS_BORDER | 
+                    WS_TABSTOP,85,18,80,14
+    CONTROL         "Eng to Rus",IDC_ENGTORUS,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,23,47,53,10
+    CONTROL         "Rus to Eng",IDC_RUSTOENG,"Button",BS_AUTORADIOBUTTON,84,
+                    47,56,10
+    GROUPBOX        "Default Translation",IDC_SDEFAULTTRANSLATION,15,35,155,
+                    28
+    GROUPBOX        "Auto Translation",IDC_SAUTOTRANSLATION,5,5,170,65
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDR_TRANSLIT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 174
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 158
+    END
+
+    IDD_ABOUT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 207
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 115
+    END
+
+    IDD_TRANSLATION, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 90
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 195
+    END
+
+    IDD_GENERALPAGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 85
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 95
+    END
+
+    IDD_LAYOUTPAGE, DIALOG
+    BEGIN
+        RIGHTMARGIN, 140
+        BOTTOMMARGIN, 108
+    END
+
+    IDD_HOTKEYSPAGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 163
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 118
+    END
+
+    IDD_CHANGETRANSLATION, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 143
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 184
+    END
+
+    IDD_TRANSLATEFILES, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 151
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 218
+    END
+
+    IDD_AUTOTRANSLATIONPAGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 178
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 74
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_TRANSLIT MENU 
+BEGIN
+    POPUP "&Translit"
+    BEGIN
+        MENUITEM "E&xit\tAlt+F4",               ID_APP_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        POPUP "&English"
+        BEGIN
+            MENUITEM "&Undo\tCtrl+Z",               ID_EDIT_ENG_UNDO
+            MENUITEM "&Redo\tCtrl+Y",               ID_EDIT_ENG_REDO
+            MENUITEM SEPARATOR
+            MENUITEM "Cu&t\tCtrl+X",                ID_EDIT_ENG_CUT
+            MENUITEM "&Copy\tCtrl+C",               ID_EDIT_ENG_COPY
+            MENUITEM "&Paste\tCtrl+V",              ID_EDIT_ENG_PASTE
+            MENUITEM "&Delete\tDel",                ID_EDIT_ENG_DELETE
+            MENUITEM "Delete &All",                 ID_EDIT_ENG_DELETEALL
+            MENUITEM SEPARATOR
+            MENUITEM "&Select All\tCtrl+A",         ID_EDIT_ENG_SELECTALL
+        END
+        POPUP "&Russian"
+        BEGIN
+            MENUITEM "&Undo\tCtrl+Z",               ID_EDIT_RUS_UNDO
+            MENUITEM "&Redo\tCtrl+Y",               ID_EDIT_RUS_REDO
+            MENUITEM SEPARATOR
+            MENUITEM "Cu&t\tCtrl+X",                ID_EDIT_RUS_CUT
+            MENUITEM "&Copy\tCtrl+C",               ID_EDIT_RUS_COPY
+            MENUITEM "&Paste\tCtrl+V",              ID_EDIT_RUS_PASTE
+            MENUITEM "&Delete\tDel",                ID_EDIT_RUS_DELETE
+            MENUITEM "Delete &All",                 ID_EDIT_RUS_DELETEALL
+            MENUITEM SEPARATOR
+            MENUITEM "&Select All\tCtrl+A",         ID_EDIT_RUS_SELECTALL
+        END
+        MENUITEM SEPARATOR
+        POPUP "&No Translate"
+        BEGIN
+            MENUITEM "&Set\tCtrl+Shift+1",          ID_EDIT_NOTRANSLATE_SET
+            MENUITEM "&Clear\tCtrl+Shift+2",        ID_EDIT_NOTRANSLATE_CLEAR
+
+        END
+    END
+    POPUP "&Tools"
+    BEGIN
+        POPUP "&Language"
+        BEGIN
+            MENUITEM "&English",                    ID_TOOLS_LANGUAGE_ENGLISH
+
+            MENUITEM "&Russian",                    ID_TOOLS_LANGUAGE_RUSSIAN
+
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "&Translation...\tF3",         ID_TOOLS_TRANSLATION
+        MENUITEM "&Change Translation...\tF4",  ID_TOOLS_CHANGETRANSLATION
+        MENUITEM "&Options...\tF2",             ID_TOOLS_OPTIONS
+        MENUITEM SEPARATOR
+        MENUITEM "Translate &Files...\tF5",     ID_TOOLS_TRANSLATEFILES
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About...\tF1",               ID_APP_ABOUT
+    END
+END
+
+IDR_TRAY MENU 
+BEGIN
+    POPUP "Tray"
+    BEGIN
+        MENUITEM "About...\tF1",                ID_APP_ABOUT
+        MENUITEM SEPARATOR
+        MENUITEM "Options...\tF2",              ID_TOOLS_OPTIONS
+        MENUITEM "&Change Translation...\tF4",  ID_TOOLS_CHANGETRANSLATION
+        POPUP "&Language"
+        BEGIN
+            MENUITEM "&English",                    ID_TOOLS_LANGUAGE_ENGLISH
+
+            MENUITEM "&Russian",                    ID_TOOLS_LANGUAGE_RUSSIAN
+
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "&Translation...\tF3",         ID_TOOLS_TRANSLATION
+        MENUITEM SEPARATOR
+        MENUITEM "Translate &Files...\tF5",     ID_TOOLS_TRANSLATEFILES
+        MENUITEM SEPARATOR
+        MENUITEM "&Show",                       ID_SHOW
+        MENUITEM "&Hide",                       ID_HIDE
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit\tAlt+F4",               ID_APP_EXIT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_TRANSLIT            ICON                    "res\\Translit.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 4,0,0,0
+ PRODUCTVERSION 4,0,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "FileDescription", "Translit"
+            VALUE "FileVersion", "4, 0, 0, 0"
+            VALUE "InternalName", "Translit"
+            VALUE "LegalCopyright", "Copyright (C) 2003 - 2004"
+            VALUE "OriginalFilename", "Translit.exe"
+            VALUE "ProductVersion", "4, 0, 0, 0"
+        END
+        BLOCK "041904b0"
+        BEGIN
+            VALUE "FileDescription", "Транслит"
+            VALUE "FileVersion", "4, 0, 0, 0"
+            VALUE "InternalName", "Транслит"
+            VALUE "LegalCopyright", "Copyright (C) 2003 - 2004"
+            VALUE "OriginalFilename", "Translit.exe"
+            VALUE "ProductVersion", "4, 0, 0, 0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200, 0x419, 1200
+    END
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""atlres.h""\r\n"
+    "#include ""Translit.rc2""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // Neutral resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Russian resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_RUS)
+#ifdef _WIN32
+LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
+#pragma code_page(1251)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDR_TRANSLIT            "Транслит"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_NEW             "Создание нового окна\nСоздать"
+    ID_FILE_OPEN            "Открытие существуещего документа\nОткрыть"
+    ID_FILE_CLOSE           "Закрытие активного окна\nЗакрыть"
+    ID_FILE_SAVE            "Сохранение активного документа\nСохранить"
+    ID_FILE_SAVE_AS         "Сохранение активного документа под другим именем\nСохранить как"
+    ID_FILE_PAGE_SETUP      "Изменение параметров страницы\nПараметры страницы"
+    ID_FILE_PRINT_SETUP     "Смена пронтера и изменение его параметров\nНастройка принтера"
+    ID_FILE_PRINT           "Печать активного документа\nПечать"
+    ID_FILE_PRINT_PREVIEW   "Просмотр печатаемого материала в полностраничном режиме\nПредварительный просмотр"
+END
+
+STRINGTABLE 
+BEGIN
+    ATL_IDS_IDLEMESSAGE     " "
+END
+
+STRINGTABLE 
+BEGIN
+    ID_APP_ABOUT            "Вывод сведений о программе, ее версии и авторских правах\nО программе"
+    ID_APP_EXIT             "Завершение работы с приложением\nВыход"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_NEXT_PANE            "Переход к следующей панели окна\nСледующая панель"
+    ID_PREV_PANE            "Переход к предыдущей панели окна\nПредыдущая панель"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_WINDOW_NEW           "Открыть другое окно\nНовое окно"
+    ID_WINDOW_ARRANGE       "Упорядочить значки в нижней части окна\nУпорядочить значки"
+    ID_WINDOW_CASCADE       "Упорядочить окна таким образом, чтобы они перекрывались\nКаскадировать окна"
+    ID_WINDOW_TILE_HORZ     "Упорядочить окна по горизонтали\nУпорядочить по горизонтали"
+    ID_WINDOW_TILE_VERT     "Упорядочить окна по вертикали\nУпорядочить по вертикали"
+    ID_WINDOW_SPLIT         "Разбить активное окно на панели\nРазбить"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_EDIT_CLEAR           "Удаление выделенонго фрагмента\nУдалить"
+    ID_EDIT_CLEAR_ALL       "Удалить все\nУдалить все"
+    ID_EDIT_COPY            "Копирование выделенного фрагмента в буфер обмена\nКопировать в буффер"
+    ID_EDIT_CUT             "Удаление выделенного фрагмента в буфер обмена\nУдалить в буффер"
+    ID_EDIT_FIND            "Поиск заданного текстаНайти"
+    ID_EDIT_PASTE           "Вставка содержимого буффера обмена\nВставить"
+    ID_EDIT_REPEAT          "Повторить последнее действие\nПовторить"
+    ID_EDIT_REPLACE         "Замена текста\nЗаменить"
+    ID_EDIT_SELECT_ALL      "Выделение всего документа целиком\nВыделить все"
+    ID_EDIT_UNDO            "Отмена последнего выполненного действия\nОтмена"
+    ID_EDIT_REDO            "Вернуть результат последнего отмененного действия\nВернуть"
+END
+
+STRINGTABLE 
+BEGIN
+    ATL_IDS_SCSIZE          "Изменение размеров окна"
+    ATL_IDS_SCMOVE          "Изменение положения окна"
+    ATL_IDS_SCMINIMIZE      "Минимизация окна"
+    ATL_IDS_SCMAXIMIZE      "Максимизация окна"
+    ATL_IDS_SCNEXTWINDOW    "Переход к следующему окну"
+    ATL_IDS_SCPREVWINDOW    "Переход к предыдущему окну"
+    ATL_IDS_SCCLOSE         "Закрытие активного окна"
+END
+
+STRINGTABLE 
+BEGIN
+    ATL_IDS_SCRESTORE       "Восстановление размеров окна"
+    ATL_IDS_SCTASKLIST      "Активизация списка задач"
+    ATL_IDS_MDICHILD        "Активизация данного окна"
+END
+
+STRINGTABLE 
+BEGIN
+    ATL_IDS_MRU_FILE        "Открыть этот документ"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_EDIT_ENG_UNDO        "Отмена последнего выполненного действия\nОтмена"
+    ID_EDIT_ENG_REDO        "Вернуть результат последнего отмененного действия\nВернуть"
+    ID_EDIT_ENG_CUT         "Удаление выделенного фрагмента в буфер обмена\nУдалить в буффер"
+    ID_EDIT_ENG_COPY        "Копирование выделенного фрагмента в буфер обмена\nКопировать в буффер"
+    ID_EDIT_ENG_PASTE       "Вставка содержимого буффера обмена\nВставить"
+    ID_EDIT_ENG_SELECTALL   "Выделение всего документа целиком\nВыделить все"
+    ID_EDIT_ENG_DELETE      "Удаление выделенонго фрагмента\nУдалить"
+    ID_EDIT_ENG_DELETEALL   "Удалить все\nУдалить все"
+    ID_EDIT_RUS_UNDO        "Отмена последнего выполненного действия\nОтмена"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_EDIT_RUS_REDO        "Вернуть результат последнего отмененного действия\nВернуть"
+    ID_EDIT_RUS_CUT         "Удаление выделенного фрагмента в буфер обмена\nУдалить в буффер"
+    ID_EDIT_RUS_COPY        "Копирование выделенного фрагмента в буфер обмена\nКопировать в буффер"
+    ID_EDIT_RUS_PASTE       "Вставка содержимого буффера обмена\nВставить"
+    ID_EDIT_RUS_SELECTALL   "Выделение всего документа целиком\nВыделить все"
+    ID_EDIT_RUS_DELETE      "Удаление выделенонго фрагмента\nУдалить"
+    ID_EDIT_RUS_DELETEALL   "Удалить все\nУдалить все"
+    ID_TOOLS_OPTIONS        "Показать диалог опций\nОпции"
+    ID_TOOLS_LANGUAGE_ENGLISH "Английский интерфейс\nАнглийский интерфейс"
+    ID_TOOLS_LANGUAGE_RUSSIAN "Русский интерфейс\nРусский интерфейс"
+    ID_TOOLS_TRANSLATION    "Показать или скрыть окно перевода\nПеревод"
+    ID_TOOLS_CHANGETRANSLATION "Изменение Перевода\nИзменение Перевода"
+    ID_TOOLS_TRANSLATEFILES "Перевод имени файла\nПеревод Файлов"
+    ID_SHOW                 "Показать Окно\nПоказать"
+    ID_HIDE                 "Скрыть Окно\nСкрыть"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_OPTIONS             "Опции"
+    IDS_ENGTORUS            "Английский в Русский :"
+    IDS_RUSTOENG            "Русский в Английский :"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_AREYOUSURE          "Вы уверены ?"
+    IDS_RESET               "Сброс"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_EDIT_NOTRANSLATE_SET "Установка символов ""Не Перевода""\nУстановка ""Не Перевода"""
+    ID_EDIT_NOTRANSLATE_CLEAR 
+                            "Сброс символов ""Не Перевода""\nСброс ""Не Перевода"""
+    ID_EDIT_WRAPTEXT        "Переносить Текст\nПереносить Текст"
+END
+
+#endif    // Russian resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDR_TRANSLIT            "Translit"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_NEW             "Create a new document\nNew"
+    ID_FILE_OPEN            "Open an existing document\nOpen"
+    ID_FILE_CLOSE           "Close the active document\nClose"
+    ID_FILE_SAVE            "Save the active document\nSave"
+    ID_FILE_SAVE_AS         "Save the active document with a new name\nSave As"
+    ID_FILE_PAGE_SETUP      "Change the printing options\nPage Setup"
+    ID_FILE_PRINT_SETUP     "Change the printer and printing options\nPrint Setup"
+    ID_FILE_PRINT           "Print the active document\nPrint"
+    ID_FILE_PRINT_PREVIEW   "Display full pages\nPrint Preview"
+END
+
+STRINGTABLE 
+BEGIN
+    ATL_IDS_IDLEMESSAGE     " "
+END
+
+STRINGTABLE 
+BEGIN
+    ID_APP_ABOUT            "Display program information, version number and copyright\nAbout"
+    ID_APP_EXIT             "Quit the application\nExit"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_NEXT_PANE            "Switch to the next window pane\nNext Pane"
+    ID_PREV_PANE            "Switch back to the previous window pane\nPrevious Pane"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_WINDOW_NEW           "Open another window for the active document\nNew Window"
+    ID_WINDOW_ARRANGE       "Arrange icons at the bottom of the window\nArrange Icons"
+    ID_WINDOW_CASCADE       "Arrange windows so they overlap\nCascade Windows"
+    ID_WINDOW_TILE_HORZ     "Arrange windows as non-overlapping tiles\nTile Windows"
+    ID_WINDOW_TILE_VERT     "Arrange windows as non-overlapping tiles\nTile Windows"
+    ID_WINDOW_SPLIT         "Split the active window into panes\nSplit"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_EDIT_CLEAR           "Erase the selection\nErase"
+    ID_EDIT_CLEAR_ALL       "Erase everything\nErase All"
+    ID_EDIT_COPY            "Copy the selection and put it on the Clipboard\nCopy"
+    ID_EDIT_CUT             "Cut the selection and put it on the Clipboard\nCut"
+    ID_EDIT_FIND            "Find the specified text\nFind"
+    ID_EDIT_PASTE           "Insert Clipboard contents\nPaste"
+    ID_EDIT_REPEAT          "Repeat the last action\nRepeat"
+    ID_EDIT_REPLACE         "Replace specific text with different text\nReplace"
+    ID_EDIT_SELECT_ALL      "Select the entire document\nSelect All"
+    ID_EDIT_UNDO            "Undo the last action\nUndo"
+    ID_EDIT_REDO            "Redo the previously undone action\nRedo"
+END
+
+STRINGTABLE 
+BEGIN
+    ATL_IDS_SCSIZE          "Change the window size"
+    ATL_IDS_SCMOVE          "Change the window position"
+    ATL_IDS_SCMINIMIZE      "Reduce the window to an icon"
+    ATL_IDS_SCMAXIMIZE      "Enlarge the window to full size"
+    ATL_IDS_SCNEXTWINDOW    "Switch to the next document window"
+    ATL_IDS_SCPREVWINDOW    "Switch to the previous document window"
+    ATL_IDS_SCCLOSE         "Close the active window"
+END
+
+STRINGTABLE 
+BEGIN
+    ATL_IDS_SCRESTORE       "Restore the window to normal size"
+    ATL_IDS_SCTASKLIST      "Activate Task List"
+    ATL_IDS_MDICHILD        "Activate this window"
+END
+
+STRINGTABLE 
+BEGIN
+    ATL_IDS_MRU_FILE        "Open this document"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_EDIT_RUS_REDO        "Redo previuos undone action\nRedo"
+    ID_EDIT_RUS_CUT         "Cut the selection and put it on the Clipboard\nCut"
+    ID_EDIT_RUS_COPY        "Copy the selection and put it on the Clipboard\nCopy"
+    ID_EDIT_RUS_PASTE       "Insert Clipboard contents\nPaste"
+    ID_EDIT_RUS_SELECTALL   "Select all text\nSelect All"
+    ID_EDIT_RUS_DELETE      "Delete all text\nDelete All"
+    ID_EDIT_RUS_DELETEALL   "Delete all text\nDelete All"
+    ID_TOOLS_OPTIONS        "Show options dialog\nOptions"
+    ID_TOOLS_LANGUAGE_ENGLISH "English Interface"
+    ID_TOOLS_LANGUAGE_RUSSIAN "Russian Interface"
+    ID_TOOLS_TRANSLATION    "Show or hide Translation window\nTranslation"
+    ID_TOOLS_CHANGETRANSLATION "Change Translation\nChange Translation"
+    ID_TOOLS_TRANSLATEFILES "Translate file names\nTranslate Files"
+    ID_SHOW                 "Show Window\nShow"
+    ID_HIDE                 "Hide Window\nHide"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_EDIT_ENG_UNDO        "Undo the last action\nUndo"
+    ID_EDIT_ENG_REDO        "Redo previuos undone action\nRedo"
+    ID_EDIT_ENG_CUT         "Cut the selection and put it on the Clipboard\nCut"
+    ID_EDIT_ENG_COPY        "Copy the selection and put it on the Clipboard\nCopy"
+    ID_EDIT_ENG_PASTE       "Insert Clipboard contents\nPaste"
+    ID_EDIT_ENG_SELECTALL   "Select all text\nSelect All"
+    ID_EDIT_ENG_DELETE      "Delete the selection\nDelete"
+    ID_EDIT_ENG_DELETEALL   "Delete all text\nDelete All"
+    ID_EDIT_RUS_UNDO        "Undo the last action\nUndo"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_OPTIONS             "Options"
+    IDS_ENGTORUS            "English to Russian :"
+    IDS_RUSTOENG            "Russian to English :"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_AREYOUSURE          "Are you sure ?"
+    IDS_RESET               "Reset"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_EDIT_NOTRANSLATE_SET "Set ""Not Translate"" symbols\nSet ""Not Translate"""
+    ID_EDIT_NOTRANSLATE_CLEAR 
+                            "Clear ""Not Translate"" symbols\nClear ""Not Translate"""
+    ID_EDIT_WRAPTEXT        "Wrap Text\nWrap Text"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+

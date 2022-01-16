@@ -1,0 +1,331 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.hpp"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "atlres.h"
+#include "richedit.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Neutral resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NEU)
+#ifdef _WIN32
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+#pragma code_page(1251)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 7,0,0,0
+ PRODUCTVERSION 7,0,0,0
+ FILEFLAGSMASK 0x1fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "FileDescription", "Transliterator"
+            VALUE "FileVersion", "7, 0, 0, 0"
+            VALUE "InternalName", "Transliterator"
+            VALUE "LegalCopyright", "Copyright (C) 2003 - 2005"
+            VALUE "OriginalFilename", "Transliterator.exe"
+            VALUE "ProductName", "Transliterator"
+            VALUE "ProductVersion", "7, 0, 0, 0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_TRANSLITERATOR ACCELERATORS 
+BEGIN
+    VK_F4,          ID_APP_EXIT,            VIRTKEY, ALT, NOINVERT
+    "1",            ID_PROFILE_FIRST,       VIRTKEY, CONTROL, NOINVERT
+    "2",            32781,                  VIRTKEY, CONTROL, NOINVERT
+    "3",            32782,                  VIRTKEY, CONTROL, NOINVERT
+    "4",            32783,                  VIRTKEY, CONTROL, NOINVERT
+    "5",            32784,                  VIRTKEY, CONTROL, NOINVERT
+    "6",            32785,                  VIRTKEY, CONTROL, NOINVERT
+    "7",            32786,                  VIRTKEY, CONTROL, NOINVERT
+    "8",            32787,                  VIRTKEY, CONTROL, NOINVERT
+    "9",            32788,                  VIRTKEY, CONTROL, NOINVERT
+    "0",            32789,                  VIRTKEY, CONTROL, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_TRANSLITERATOR      ICON                    "res\\Transliterator.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_TRANSLITERATOR MENU 
+BEGIN
+    POPUP "File"
+    BEGIN
+        MENUITEM "Open to top...",              ID_FILE_OPEN_TOP
+        MENUITEM "Open to bottom...",           ID_FILE_OPEN_BOTTOM
+        MENUITEM "Save top...",                 ID_FILE_SAVE_TOP
+        MENUITEM "Save bottom...",              ID_FILE_SAVE_BOTTOM
+        MENUITEM SEPARATOR
+        MENUITEM "Exit",                        ID_APP_EXIT
+    END
+    POPUP "Edit"
+    BEGIN
+        MENUITEM "Undo",                        ID_EDIT_UNDO
+        MENUITEM "Redo",                        ID_EDIT_REDO
+        MENUITEM SEPARATOR
+        MENUITEM "Cut",                         ID_EDIT_CUT
+        MENUITEM "Copy",                        ID_EDIT_COPY
+        MENUITEM "Paste",                       ID_EDIT_PASTE
+        MENUITEM "Clear",                       ID_EDIT_CLEAR
+        MENUITEM "Clear All",                   ID_EDIT_CLEAR_ALL
+        MENUITEM SEPARATOR
+        MENUITEM "Select All",                  ID_EDIT_SELECT_ALL
+    END
+    POPUP "Profile"
+    BEGIN
+        MENUITEM " ",                           ID_PROFILE_
+    END
+    POPUP "Options"
+    BEGIN
+        MENUITEM "General",                     ID_OPTIONS_GENERAL
+        MENUITEM "View",                        ID_OPTIONS_VIEW
+        MENUITEM "Hot Keys",                    ID_OPTIONS_HOTKEYS
+    END
+    POPUP "Tools"
+    BEGIN
+        MENUITEM "Files Translation",           ID_TOOLS_FILES_TRANSLATION
+    END
+    POPUP "Help"
+    BEGIN
+        MENUITEM "Usage",                       ID_HELP_USAGE
+        MENUITEM SEPARATOR
+        MENUITEM "About",                       ID_HELP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDR_TRANSLITERATOR DIALOGEX 0, 0, 185, 170
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CENTER | WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+END
+
+IDD_PROFILE DIALOGEX 0, 0, 185, 156
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD
+EXSTYLE WS_EX_ACCEPTFILES
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "",IDC_GRPTOP,0,0,185,77,BS_LEFTTEXT,WS_EX_TRANSPARENT
+    GROUPBOX        "",IDC_GRPBOTTOM,0,79,185,77,BS_LEFTTEXT,WS_EX_TRANSPARENT
+END
+
+IDD_OPTIONS_GENERAL DIALOGEX 0, 0, 185, 155
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "Language",IDC_GRPLANGUAGE,0,0,85,31
+    COMBOBOX        IDC_CMBLANGUAGE,5,11,72,55,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Startup",IDC_GRPSTARTUP,89,0,96,31
+    COMBOBOX        IDC_CMBSTARTUP,95,11,85,56,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Save Text",IDC_GRPSAVETEXT,0,35,85,32
+    COMBOBOX        IDC_CMBSAVETEXT,5,48,70,59,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Apply",IDC_BTNAPPLY,65,135,55,14
+    PUSHBUTTON      "Restore",IDC_BTNRESTORE,125,135,55,14
+END
+
+IDD_OPTIONS_VIEW DIALOGEX 0, 0, 185, 155
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "Controls",IDC_GRPCONTROLS,95,0,89,60
+    GROUPBOX        "Placement",IDC_GRPPLACEMENT,0,0,89,60
+    CONTROL         "Task Bar",IDC_CHKTASKBAR,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,5,12,80,10
+    PUSHBUTTON      "Apply",IDC_BTNAPPLY,65,135,55,14
+    PUSHBUTTON      "Restore",IDC_BTNRESTORE,125,135,55,14
+    CONTROL         "Tray",IDC_CHKTRAY,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,5,27,80,10
+    COMBOBOX        IDC_CMBPLACEMENT,5,42,78,64,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Wrap Text",IDC_CHKWRAPTEXT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,100,12,80,10
+    CONTROL         "Scroll Text",IDC_CHKSCROLLTEXT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,100,27,80,8
+    CONTROL         "Switch Controls",IDC_CHKSWITCHCONTROLS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,100,42,80,10
+END
+
+IDD_OPTIONS_HOTKEYS DIALOGEX 0, 0, 185, 155
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+END
+
+IDD_TOOLS_FILES_TRANSLATION DIALOGEX 0, 0, 185, 155
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+END
+
+IDD_HELP_USAGE DIALOGEX 0, 0, 185, 155
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+END
+
+IDD_HELP_ABOUT DIALOGEX 0, 0, 185, 155
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_PROFILE, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 155
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // Neutral resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Russian resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_RUS)
+#ifdef _WIN32
+LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
+#pragma code_page(1251)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDR_TRANSLITERATOR      "Транслитератор"
+END
+
+STRINGTABLE 
+BEGIN
+    ATL_IDS_IDLEMESSAGE     " "
+END
+
+#endif    // Russian resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.hpp\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""atlres.h""\r\n"
+    "#include ""richedit.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDR_TRANSLITERATOR      "Transliterator"
+END
+
+STRINGTABLE 
+BEGIN
+    ATL_IDS_IDLEMESSAGE     " "
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

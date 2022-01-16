@@ -1,0 +1,978 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "atlres.h"
+#include "Transliterator.rc2"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Neutral resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NEU)
+#ifdef _WIN32
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+#pragma code_page(1251)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 6,0,0,0
+ PRODUCTVERSION 6,0,0,0
+ FILEFLAGSMASK 0x17L
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "FileDescription", "Transliterator"
+            VALUE "FileVersion", "6, 0, 0, 0"
+            VALUE "InternalName", "Transliterator"
+            VALUE "LegalCopyright", "Copyright (C) 2003 - 2005"
+            VALUE "OriginalFilename", "Transliterator.exe"
+            VALUE "ProductVersion", "6, 0, 0, 0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_TRANSLITERATOR      ICON                    "res\\Transliterator.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDR_TRANSLITERATOR DIALOGEX 0, 0, 185, 190
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CENTER | WS_MINIMIZEBOX | WS_MAXIMIZEBOX | 
+    WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION " "
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    GROUPBOX        "",IDC_GRPLANGTOP,2,2,181,80,0,WS_EX_TRANSPARENT
+    GROUPBOX        "",IDC_GRPLANGBOTTOM,2,85,181,80,0,WS_EX_TRANSPARENT
+    CONTROL         "",IDC_STATICSEPARATOR,"Static",SS_ETCHEDHORZ,0,0,186,1
+END
+
+IDD_PROFILEDETAILS DIALOGEX 0, 0, 111, 170
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU | 
+    WS_THICKFRAME
+EXSTYLE WS_EX_TOOLWINDOW
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "",IDC_LBLPROFILE,2,0,32,12
+    COMBOBOX        IDC_CMBPROFILE,35,0,75,58,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "",IDC_LBLVIEW,2,15,32,12
+    COMBOBOX        IDC_CMBVIEW,35,15,75,58,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    CONTROL         "",IDC_STATICSEPARATOR,"Static",SS_ETCHEDHORZ,0,30,110,1,
+                    WS_EX_TRANSPARENT
+    CONTROL         "",IDC_REDETAILS,"RichEdit20A",ES_MULTILINE | 
+                    ES_READONLY | WS_BORDER | WS_VSCROLL | WS_HSCROLL | 
+                    WS_TABSTOP,0,34,110,136
+END
+
+IDD_TRANSLATEFILES DIALOGEX 0, 0, 195, 201
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "",IDC_GRPPATH,3,0,189,33
+    COMBOBOX        IDC_CMBPATH,8,10,161,50,CBS_DROPDOWN | CBS_AUTOHSCROLL | 
+                    WS_TABSTOP
+    PUSHBUTTON      "",IDC_BTNBROWSE,169,10,15,14
+    GROUPBOX        "",IDC_GRPFOLDER,3,35,90,70
+    CONTROL         "",IDC_CHKSELFOLDER,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,8,45,77,10
+    CONTROL         "",IDC_CHKALLFILES,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    8,60,77,10
+    CONTROL         "",IDC_CHKALLFOLDERS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,8,75,77,10
+    CONTROL         "",IDC_CHKALLSUBFOLDERS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,8,90,77,10
+    GROUPBOX        "",IDC_GRPFILE,102,35,90,70
+    CONTROL         "",IDC_CHKNAME,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,107,
+                    45,77,10
+    CONTROL         "",IDC_CHKENTRY,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    107,60,77,10
+    CONTROL         "",IDC_CHKMP3TAGV1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    107,75,77,10
+    CONTROL         "",IDC_CHKMP3TAGV2,"Button",BS_AUTOCHECKBOX | NOT 
+                    WS_VISIBLE | WS_TABSTOP,107,90,77,10
+    GROUPBOX        "",IDC_GRPPROFILE,3,108,90,33
+    COMBOBOX        IDC_CMBPROFILE,8,121,80,38,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    GROUPBOX        "",IDC_GRPIGNORE,102,108,90,23
+    CONTROL         "",IDC_CHKUSEIGNORE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,107,120,77,8
+    GROUPBOX        "",IDC_GRPDIRECTION,3,142,90,33
+    COMBOBOX        IDC_CMBDIRECTION,8,155,77,38,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "",IDC_GRPEXTRA,102,132,90,43
+    LTEXT           "",IDC_LBLPREFIX,107,146,35,8
+    EDITTEXT        IDC_EDTPREFIX,148,143,40,12,ES_AUTOHSCROLL
+    LTEXT           "",IDC_LBLSUFFIX,107,163,35,8
+    EDITTEXT        IDC_EDTSUFFIX,148,161,40,12,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "",IDC_BTNTRANSLATE,43,182,50,14
+    PUSHBUTTON      "",IDCANCEL,100,182,50,14
+END
+
+IDD_ABOUT DIALOGEX 0, 0, 240, 263
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0xCC
+BEGIN
+    PUSHBUTTON      "OK",IDOK,180,243,55,16
+    PUSHBUTTON      "",IDC_BTNEMAIL,40,225,60,13,BS_FLAT
+    PUSHBUTTON      "",IDC_BTNSITE,40,245,60,13,BS_FLAT
+    LTEXT           "",IDC_LBLABOUTPROGRAM,5,5,230,10,SS_SUNKEN
+    LTEXT           "",IDC_LBLEMAIL,5,225,30,13
+    LTEXT           "",IDC_LBLSITE,5,245,30,13
+    EDITTEXT        IDC_EDTABOUT,5,20,230,200,ES_MULTILINE | ES_READONLY | 
+                    WS_VSCROLL
+END
+
+IDD_OPTIONS DIALOGEX 0, 0, 320, 165
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LISTBOX         IDC_LSTOPTIONS,0,0,70,114,LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "",IDOK,10,119,50,14
+    PUSHBUTTON      "",IDCANCEL,10,133,50,14
+    PUSHBUTTON      "",IDC_BTNAPPLY,10,147,50,14
+    GROUPBOX        "",IDC_GRPOPTIONPLACE,75,1,240,160,NOT WS_VISIBLE
+END
+
+IDD_PAGEGENERAL DIALOGEX 0, 0, 240, 160
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "",IDC_GRPSTORAGE,0,0,130,159
+    GROUPBOX        "",IDC_GRPSTORAGETEXT,5,9,116,99
+    CONTROL         "",IDC_CHKSAVETEXTONEXIT,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,11,23,101,8
+    CONTROL         "",IDC_RADTEXTREGISTRY,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,11,37,102,10
+    CONTROL         "",IDC_RADTEXTFILE,"Button",BS_AUTORADIOBUTTON,11,51,102,
+                    10
+    LTEXT           "",IDC_LBLTOP,11,72,50,8
+    EDITTEXT        IDC_EDTLANGTOP,65,69,50,14,ES_AUTOHSCROLL
+    LTEXT           "",IDC_LBLBOTTOM,11,91,50,8
+    EDITTEXT        IDC_EDTLANGBOTTOM,65,89,50,14,ES_AUTOHSCROLL
+    GROUPBOX        "",IDC_GRPSTORAGEPROFILES,5,113,116,39
+    CONTROL         "",IDC_RADPROFILESREGISTRY,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,11,126,103,8
+    CONTROL         "",IDC_RADPROFILESFILE,"Button",BS_AUTORADIOBUTTON,11,
+                    139,103,8
+    GROUPBOX        "",IDC_GRPLOADONSTARTUP,137,0,103,57
+    CONTROL         "",IDC_RADLOADNO,"Button",BS_AUTORADIOBUTTON | WS_GROUP,
+                    143,12,90,8
+    CONTROL         "",IDC_RADLOADSHOWN,"Button",BS_AUTORADIOBUTTON,143,27,
+                    90,8
+    CONTROL         "",IDC_RADLOADHIDDEN,"Button",BS_AUTORADIOBUTTON,143,42,
+                    90,8
+    GROUPBOX        "",IDC_GRPLANGUAGE,136,65,103,95
+    CONTROL         "",IDC_RADENGLISH,"Button",BS_AUTORADIOBUTTON | WS_GROUP,
+                    143,80,90,8
+    CONTROL         "",IDC_RADRUSSIAN,"Button",BS_AUTORADIOBUTTON,143,100,90,
+                    8
+    CONTROL         "",IDC_RADBELARUSIAN,"Button",BS_AUTORADIOBUTTON | 
+                    WS_DISABLED,143,120,90,8
+    CONTROL         "",IDC_RADTRANSLIT,"Button",BS_AUTORADIOBUTTON,143,140,
+                    90,8
+END
+
+IDD_PAGEVIEW DIALOGEX 0, 0, 240, 160
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "",IDC_GRPCAPTION,0,0,90,35
+    CONTROL         "",IDC_CHKCAPTIONPROFILE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,5,9,77,8
+    CONTROL         "",IDC_CHKCAPTIONCOUNT,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,5,23,77,8
+    GROUPBOX        "",IDC_GRPSTATUSBAR,0,38,90,24
+    CONTROL         "",IDC_CHKSTATUSBARCOUNT,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,5,48,77,8
+    GROUPBOX        "",IDC_GRPTRAYICON,0,67,90,24
+    CONTROL         "",IDC_CHKTRAYICONSHOW,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,5,78,77,8
+    GROUPBOX        "",IDC_GRPTASKBAR,0,95,90,24
+    CONTROL         "",IDC_CHKTASKBARSHOW,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,5,106,77,8
+    GROUPBOX        "",IDC_GRPPLACEMENT,100,0,139,58
+    CONTROL         "",IDC_RADNORMAL,"Button",BS_AUTORADIOBUTTON | WS_GROUP,
+                    105,10,115,8
+    CONTROL         "",IDC_RADONTOP,"Button",BS_AUTORADIOBUTTON,105,24,115,8
+    CONTROL         "",IDC_RADONBOTTOM,"Button",BS_AUTORADIOBUTTON,105,40,
+                    115,8
+    GROUPBOX        "",IDC_GRPCONTROLS,0,125,90,35
+    CONTROL         "",IDC_CHKWRAPTEXT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    5,134,77,8
+    CONTROL         "",IDC_CHKSCROLLTEXT,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,5,148,77,8
+    GROUPBOX        "",IDC_GRPFONTS,100,63,139,75
+    CONTROL         "",IDC_REFONTLANGTOP,"RichEdit20A",ES_AUTOHSCROLL | 
+                    WS_BORDER | WS_TABSTOP,105,74,75,14
+    CONTROL         "",IDC_REFONTLANGBOTTOM,"RichEdit20A",ES_AUTOHSCROLL | 
+                    WS_BORDER | WS_TABSTOP,105,96,75,14
+    CONTROL         "",IDC_REFONTDetails,"RichEdit20A",ES_AUTOHSCROLL | 
+                    WS_BORDER | WS_TABSTOP,105,117,75,14
+    PUSHBUTTON      "",IDC_BTNFONTLANGTOP,180,74,55,14
+    PUSHBUTTON      "",IDC_BTNFONTLANGBOTTOM,180,97,55,14
+    PUSHBUTTON      "",IDC_BTNFONTPROFILEDETAILS,180,117,55,14
+END
+
+IDD_PAGEHOTKEYS DIALOGEX 0, 0, 240, 160
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "",IDC_GRPHOTKEYS,0,0,165,53
+    LTEXT           "",IDC_LBLACTION,10,13,50,8
+    LTEXT           "",IDC_LBLHOTKEY,10,34,50,8
+    COMBOBOX        IDC_CMBACTION,70,10,86,61,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    CONTROL         "",IDC_HKACTION,"msctls_hotkey32",WS_BORDER | WS_TABSTOP,
+                    70,32,86,14
+    GROUPBOX        "",IDC_GRPAUTOTRANSLITERATION,0,57,165,50
+    CONTROL         "",IDC_RADLANGTOPTOLANGBOTTOM,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,10,70,145,8
+    CONTROL         "",IDC_RADLANGBOTTOMTOLANGTOP,"Button",
+                    BS_AUTORADIOBUTTON,9,90,145,8
+END
+
+IDD_PAGEPROFILE DIALOGEX 0, 0, 240, 159
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "",IDC_GRPPROFILE,0,0,125,27
+    COMBOBOX        IDC_CMBPROFILE,10,10,105,60,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "",IDC_TABPROFILEACTION,"SysTabControl32",0x0,0,30,239,
+                    128
+    GROUPBOX        "",IDC_GRPPROFILEACTION,5,43,230,110,NOT WS_VISIBLE
+END
+
+IDD_PROFILETRANSLATION DIALOGEX 0, 0, 231, 106
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_LVTRANSLATION,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_NOLABELWRAP | 
+                    LVS_ALIGNLEFT | LVS_NOSORTHEADER | WS_BORDER | 
+                    WS_TABSTOP,2,3,170,65
+    LTEXT           "",IDC_LBLLANGTOP,2,75,50,8
+    LTEXT           "",IDC_LBLLANGBOTTOM,2,89,50,8
+    CONTROL         "",IDC_RELANGTOP,"RichEdit20A",ES_AUTOHSCROLL | 
+                    ES_WANTRETURN | WS_BORDER | WS_TABSTOP,55,71,40,14
+    CONTROL         "",IDC_RELANGBOTTOM,"RichEdit20A",ES_AUTOHSCROLL | 
+                    ES_WANTRETURN | WS_BORDER | WS_TABSTOP,55,87,40,14
+    CONTROL         "",IDC_CHKLANGTOPTOLANGBOTTOM,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,105,74,119,10
+    CONTROL         "",IDC_CHKLANGBOTTOMTOLANGTOP,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,105,89,119,10
+    PUSHBUTTON      "",IDC_BTNADD,180,30,50,14
+    PUSHBUTTON      "",IDC_BTNDELETE,180,50,50,14
+END
+
+IDD_PROFILEIGNORE DIALOGEX 0, 0, 230, 110
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "",IDC_GRPIGNORE,0,0,125,56
+    LTEXT           "",IDC_LBLLANGTOP,5,23,50,8
+    LTEXT           "",IDC_LBLLANGBOTTOM,5,40,50,8
+    LTEXT           "",IDC_LBLBEGIN,60,10,27,8
+    LTEXT           "",IDC_LBLEND,93,10,27,8
+    CONTROL         "",IDC_REBEGINTOP,"RichEdit20A",ES_AUTOHSCROLL | 
+                    WS_BORDER | WS_TABSTOP,57,20,30,14
+    CONTROL         "",IDC_REENDTOP,"RichEdit20A",ES_AUTOHSCROLL | WS_BORDER | 
+                    WS_TABSTOP,91,21,30,14
+    CONTROL         "",IDC_REBEGINBOTTOM,"RichEdit20A",ES_AUTOHSCROLL | 
+                    WS_BORDER | WS_TABSTOP,57,38,30,14
+    CONTROL         "",IDC_REENDBOTTOM,"RichEdit20A",ES_AUTOHSCROLL | 
+                    WS_BORDER | WS_TABSTOP,91,38,30,14
+    GROUPBOX        "",IDC_GRPIGNORETEXT,130,0,99,110
+    LTEXT           "",IDC_LBLTEXT,133,17,33,8
+    CONTROL         "",IDC_RETEXT,"RichEdit20A",ES_AUTOHSCROLL | WS_BORDER | 
+                    WS_TABSTOP,170,14,57,14
+    CONTROL         "",IDC_CHKLANGTOPTOLANGBOTTOM,"Button",BS_AUTOCHECKBOX | 
+                    BS_MULTILINE | WS_TABSTOP,133,34,90,16
+    CONTROL         "",IDC_CHKLANGBOTTOMTOLANGTOP,"Button",BS_AUTOCHECKBOX | 
+                    BS_MULTILINE | WS_TABSTOP,133,57,90,16
+    PUSHBUTTON      "",IDC_BTNADD,134,79,50,14
+    PUSHBUTTON      "",IDC_BTNDELETE,134,93,50,14
+    CONTROL         "",IDC_LVIGNORETEXT,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | 
+                    LVS_NOSORTHEADER | WS_BORDER | WS_TABSTOP,0,60,124,50
+END
+
+IDD_PROFILEEXPORTIMPORT DIALOGEX 0, 0, 230, 110
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "",IDC_GRPEXPORTIMPORT,5,5,191,85
+    LTEXT           "",IDC_LBLPATH,15,25,30,8
+    EDITTEXT        IDC_EDTPATH,50,22,110,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "",IDC_BTNBROWSE,160,22,21,14
+    CONTROL         "",IDC_CHKUNICODE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    16,45,92,8
+    PUSHBUTTON      "",IDC_BTNEXPORT,50,60,50,14
+    PUSHBUTTON      "",IDC_BTNIMPORT,125,60,50,14
+END
+
+IDD_PROFILECOPYPROFILE DIALOGEX 0, 0, 230, 110
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "",IDC_GRPCOPYPROFILE,5,5,157,82
+    LTEXT           "",IDC_LBLFROM,21,23,40,8
+    LTEXT           "",IDC_LBLTO,20,45,40,8
+    COMBOBOX        IDC_CMBFROM,70,21,84,45,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    COMBOBOX        IDC_CMBTO,70,43,84,45,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    PUSHBUTTON      "",IDC_BTNCOPY,105,65,50,14
+END
+
+IDD_PROFILENAME DIALOGEX 0, 0, 230, 110
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "",IDC_GRPNAME,5,5,172,101
+    LTEXT           "",IDC_LBLPROFILENAME,15,23,70,8
+    LTEXT           "",IDC_LBLLANGTOP,15,44,70,8
+    LTEXT           "",IDC_LBLLANGBOTTOM,15,66,70,8
+    EDITTEXT        IDC_EDTPROFILENAME,90,19,75,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDTLANGTOP,90,40,75,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDTLANGBOTTOM,90,63,75,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "",IDC_BTNSET,115,85,50,14
+END
+
+IDD_PROFILERESET DIALOGEX 0, 0, 230, 110
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "",IDC_GRPRESET,5,5,145,100
+    CONTROL         "",IDC_CHKRESETTRANSLATION,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,15,20,125,8
+    CONTROL         "",IDC_CHKRESETIGNORE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,15,36,125,8
+    CONTROL         "",IDC_CHKRESETIGNORETEXT,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,15,53,125,8
+    CONTROL         "",IDC_CHKRESETNAME,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,15,69,125,8
+    PUSHBUTTON      "",IDC_BTNRESET,95,85,50,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDR_TRANSLITERATOR, DIALOG
+    BEGIN
+        RIGHTMARGIN, 177
+        BOTTOMMARGIN, 185
+    END
+
+    IDD_TRANSLATEFILES, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 196
+    END
+
+    IDD_PROFILETRANSLATION, DIALOG
+    BEGIN
+        RIGHTMARGIN, 230
+        BOTTOMMARGIN, 105
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_TRANSLITERATOR ACCELERATORS 
+BEGIN
+    VK_F1,          ID_APP_ABOUT,           VIRTKEY, NOINVERT
+    VK_F2,          ID_TOOLS_OPTIONS,       VIRTKEY, NOINVERT
+    VK_F3,          ID_TOOLS_PROFILEDETAILS, VIRTKEY, NOINVERT
+    VK_F4,          ID_TOOLS_TRANSLATEFILES, VIRTKEY, NOINVERT
+    VK_F4,          ID_APP_EXIT,            VIRTKEY, ALT, NOINVERT
+    "1",            ID_PROFILE1,            VIRTKEY, CONTROL, NOINVERT
+    "2",            ID_PROFILE2,            VIRTKEY, CONTROL, NOINVERT
+    "3",            ID_PROFILE3,            VIRTKEY, CONTROL, NOINVERT
+    "4",            ID_PROFILE4,            VIRTKEY, CONTROL, NOINVERT
+    "5",            ID_PROFILE5,            VIRTKEY, CONTROL, NOINVERT
+    "6",            ID_PROFILE6,            VIRTKEY, CONTROL, NOINVERT
+    "7",            ID_PROFILE7,            VIRTKEY, CONTROL, NOINVERT
+    "8",            ID_PROFILE8,            VIRTKEY, CONTROL, NOINVERT
+    "9",            ID_PROFILE9,            VIRTKEY, CONTROL, NOINVERT
+    "0",            ID_PROFILE10,           VIRTKEY, CONTROL, NOINVERT
+    "I",            ID_EDIT_IGNORE_INSERT,  VIRTKEY, SHIFT, ALT, NOINVERT
+    "R",            ID_EDIT_IGNORE_REMOVE,  VIRTKEY, SHIFT, ALT, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_TRANSLITERATOR MENU 
+BEGIN
+    POPUP " "
+    BEGIN
+        MENUITEM " ",                           ID_APP_EXIT
+    END
+    POPUP " "
+    BEGIN
+        MENUITEM " ",                           ID_EDIT_UNDO
+        MENUITEM " ",                           ID_EDIT_REDO
+        MENUITEM SEPARATOR
+        MENUITEM " ",                           ID_EDIT_CUT
+        MENUITEM " ",                           ID_EDIT_COPY
+        MENUITEM " ",                           ID_EDIT_PASTE
+        MENUITEM " ",                           ID_EDIT_CLEAR
+        MENUITEM " ",                           ID_EDIT_CLEAR_ALL
+        MENUITEM SEPARATOR
+        MENUITEM " ",                           ID_EDIT_SELECT_ALL
+        MENUITEM SEPARATOR
+        POPUP " "
+        BEGIN
+            MENUITEM " ",                           ID_EDIT_IGNORE_INSERT
+            MENUITEM " ",                           ID_EDIT_IGNORE_REMOVE
+        END
+        POPUP " "
+        BEGIN
+            MENUITEM " ",                           ID_EDIT_COPY_LANGTOPTOLANGBOTTOM
+
+            MENUITEM " ",                           ID_EDIT_COPY_LANGBOTTOMTOLANGTOP
+
+        END
+    END
+    POPUP " "
+    BEGIN
+        MENUITEM " ",                           ID_PROFILE1
+        MENUITEM " ",                           ID_PROFILE2
+        MENUITEM " ",                           ID_PROFILE3
+        MENUITEM " ",                           ID_PROFILE4
+        MENUITEM " ",                           ID_PROFILE5
+        MENUITEM " ",                           ID_PROFILE6
+        MENUITEM " ",                           ID_PROFILE7
+        MENUITEM " ",                           ID_PROFILE8
+        MENUITEM " ",                           ID_PROFILE9
+        MENUITEM " ",                           ID_PROFILE10
+    END
+    POPUP " "
+    BEGIN
+        MENUITEM " ",                           ID_TOOLS_PROFILEDETAILS
+        MENUITEM " ",                           ID_TOOLS_TRANSLATEFILES
+        MENUITEM SEPARATOR
+        MENUITEM " ",                           ID_TOOLS_OPTIONS
+        MENUITEM SEPARATOR
+        POPUP " "
+        BEGIN
+            MENUITEM " ",                           ID_TOOLS_ACTION_TRANSLITERATION
+
+            MENUITEM " ",                           ID_TOOLS_ACTION_IGNORE
+            MENUITEM " ",                           ID_TOOLS_ACTION_IGNORETEXT
+
+            MENUITEM SEPARATOR
+            MENUITEM " ",                           ID_TOOLS_ACTION_COPYIGNORE
+
+        END
+    END
+    POPUP " "
+    BEGIN
+        MENUITEM " ",                           ID_APP_ABOUT
+    END
+END
+
+IDR_TRAYICON MENU 
+BEGIN
+    POPUP " "
+    BEGIN
+        MENUITEM " ",                           ID_APP_ABOUT
+        MENUITEM SEPARATOR
+        MENUITEM " ",                           ID_TOOLS_PROFILEDETAILS
+        MENUITEM " ",                           ID_TOOLS_TRANSLATEFILES
+        MENUITEM SEPARATOR
+        MENUITEM " ",                           ID_TOOLS_OPTIONS
+        MENUITEM SEPARATOR
+        POPUP " "
+        BEGIN
+            MENUITEM " ",                           ID_PROFILE1
+            MENUITEM " ",                           ID_PROFILE2
+            MENUITEM " ",                           ID_PROFILE3
+            MENUITEM " ",                           ID_PROFILE4
+            MENUITEM " ",                           ID_PROFILE5
+            MENUITEM " ",                           ID_PROFILE6
+            MENUITEM " ",                           ID_PROFILE7
+            MENUITEM " ",                           ID_PROFILE8
+            MENUITEM " ",                           ID_PROFILE9
+            MENUITEM " ",                           ID_PROFILE10
+        END
+        MENUITEM SEPARATOR
+        MENUITEM " ",                           ID_SHOW
+        MENUITEM " ",                           ID_HIDE
+        MENUITEM SEPARATOR
+        MENUITEM " ",                           ID_APP_EXIT
+    END
+END
+
+IDR_PROFILE MENU 
+BEGIN
+    POPUP " "
+    BEGIN
+        MENUITEM " ",                           ID_PROFILE1
+        MENUITEM " ",                           ID_PROFILE2
+        MENUITEM " ",                           ID_PROFILE3
+        MENUITEM " ",                           ID_PROFILE4
+        MENUITEM " ",                           ID_PROFILE5
+        MENUITEM " ",                           ID_PROFILE6
+        MENUITEM " ",                           ID_PROFILE7
+        MENUITEM " ",                           ID_PROFILE8
+        MENUITEM " ",                           ID_PROFILE9
+        MENUITEM " ",                           ID_PROFILE10
+    END
+END
+
+IDR_EDIT MENU 
+BEGIN
+    POPUP " "
+    BEGIN
+        MENUITEM " ",                           ID_EDIT_UNDO
+        MENUITEM " ",                           ID_EDIT_REDO
+        MENUITEM SEPARATOR
+        MENUITEM " ",                           ID_EDIT_CUT
+        MENUITEM " ",                           ID_EDIT_COPY
+        MENUITEM " ",                           ID_EDIT_PASTE
+        MENUITEM " ",                           ID_EDIT_CLEAR
+        MENUITEM " ",                           ID_EDIT_CLEAR_ALL
+        MENUITEM SEPARATOR
+        MENUITEM " ",                           ID_EDIT_SELECT_ALL
+        MENUITEM SEPARATOR
+        POPUP " "
+        BEGIN
+            MENUITEM " ",                           ID_EDIT_IGNORE_INSERT
+            MENUITEM " ",                           ID_EDIT_IGNORE_REMOVE
+        END
+        POPUP " "
+        BEGIN
+            MENUITEM " ",                           ID_EDIT_COPY_LANGTOPTOLANGBOTTOM
+
+            MENUITEM " ",                           ID_EDIT_COPY_LANGBOTTOMTOLANGTOP
+
+        END
+        MENUITEM SEPARATOR
+        POPUP " "
+        BEGIN
+            MENUITEM " ",                           ID_PROFILE1
+            MENUITEM " ",                           ID_PROFILE2
+            MENUITEM " ",                           ID_PROFILE3
+            MENUITEM " ",                           ID_PROFILE4
+            MENUITEM " ",                           ID_PROFILE5
+            MENUITEM " ",                           ID_PROFILE6
+            MENUITEM " ",                           ID_PROFILE7
+            MENUITEM " ",                           ID_PROFILE8
+            MENUITEM " ",                           ID_PROFILE9
+            MENUITEM " ",                           ID_PROFILE10
+        END
+    END
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""atlres.h""\r\n"
+    "#include ""Transliterator.rc2""\r\n"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // Neutral resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Russian resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_RUS)
+#ifdef _WIN32
+LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
+#pragma code_page(1251)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDR_TRANSLITERATOR      "Транслитератор"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_NEW             "Создание нового окна\nСоздать"
+    ID_FILE_OPEN            "Открытие существуещего документа\nОткрыть"
+    ID_FILE_CLOSE           "Закрытие активного окна\nЗакрыть"
+    ID_FILE_SAVE            "Сохранение активного документа\nСохранить"
+    ID_FILE_SAVE_AS         "Сохранение активного документа под другим именем\nСохранить как"
+    ID_FILE_PAGE_SETUP      "Изменение параметров страницы\nПараметры страницы"
+    ID_FILE_PRINT_SETUP     "Смена пронтера и изменение его параметров\nНастройка принтера"
+    ID_FILE_PRINT           "Печать активного документа\nПечать"
+    ID_FILE_PRINT_PREVIEW   "Просмотр печатаемого материала в полностраничном режиме\nПредварительный просмотр"
+END
+
+STRINGTABLE 
+BEGIN
+    ATL_IDS_IDLEMESSAGE     " "
+END
+
+STRINGTABLE 
+BEGIN
+    ID_EDIT_IGNORE_INSERT   "Вставить символы игнорирования\nВставить игнорирование\n"
+    ID_EDIT_IGNORE_REMOVE   "Удалить символы игнорирования\nУдалить игнорирование\n"
+    ID_EDIT_COPY_LANGTOPTOLANGBOTTOM 
+                            "Копировать текст сверху вниз\nКопировать сверху вниз"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_EDIT_COPY_LANGBOTTOMTOLANGTOP 
+                            "Копировать текст снизу вверх\nКопировать снизу вверх"
+    ID_TOOLS_PROFILEDETAILS "Показать или скрыть окно Деталей Профилей\nДетали Профилей"
+    ID_TOOLS_TRANSLATEFILES "Показать или скрыть окно Перевода Файлов\nПеревод Файлов\n"
+    ID_TOOLS_OPTIONS        "Показать или скрыть окно Опций\nОпции"
+    ID_TOOLS_ACTION_TRANSLITERATION "Разрешить транслитерацию\nТранслитерация"
+    ID_TOOLS_ACTION_IGNORE  "Разрешить Игнорирование\nИгнорирование\n"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_TOOLS_ACTION_IGNORETEXT 
+                            "Разрешить Игнорируемый текст\nИгнорируемый текст\n"
+    ID_TOOLS_ACTION_COPYIGNORE "Copy Ignore\nCopy Ignore"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_SHOW                 "Показать главное окно\nПоказать"
+    ID_HIDE                 "Скрыть главное окно\nСкрыть"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_APP_ABOUT            "Вывод сведений о программе\nО программе"
+    ID_APP_EXIT             "Завершение работы с приложением\nВыход"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_NEXT_PANE            "Переход к следующей панели окна\nСледующая панель"
+    ID_PREV_PANE            "Переход к предыдущей панели окна\nПредыдущая панель"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_WINDOW_NEW           "Открыть другое окно\nНовое окно"
+    ID_WINDOW_ARRANGE       "Упорядочить значки в нижней части окна\nУпорядочить значки"
+    ID_WINDOW_CASCADE       "Упорядочить окна таким образом, чтобы они перекрывались\nКаскадировать окна"
+    ID_WINDOW_TILE_HORZ     "Упорядочить окна по горизонтали\nУпорядочить по горизонтали"
+    ID_WINDOW_TILE_VERT     "Упорядочить окна по вертикали\nУпорядочить по вертикали"
+    ID_WINDOW_SPLIT         "Разбить активное окно на панели\nРазбить"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_EDIT_CLEAR           "Удаление выделенонго фрагмента\nУдалить"
+    ID_EDIT_CLEAR_ALL       "Удалить все\nУдалить все"
+    ID_EDIT_COPY            "Копирование выделенного фрагмента в буфер обмена\nКопировать в буффер"
+    ID_EDIT_CUT             "Удаление выделенного фрагмента в буфер обмена\nУдалить в буффер"
+    ID_EDIT_FIND            "Поиск заданного текстаНайти"
+    ID_EDIT_PASTE           "Вставка содержимого буффера обмена\nВставить"
+    ID_EDIT_REPEAT          "Повторить последнее действие\nПовторить"
+    ID_EDIT_REPLACE         "Замена текста\nЗаменить"
+    ID_EDIT_SELECT_ALL      "Выделение всего документа целиком\nВыделить все"
+    ID_EDIT_UNDO            "Отмена последнего выполненного действия\nОтмена"
+    ID_EDIT_REDO            "Вернуть результат последнего отмененного действия\nВернуть"
+END
+
+STRINGTABLE 
+BEGIN
+    ATL_IDS_SCSIZE          "Изменение размеров окна"
+    ATL_IDS_SCMOVE          "Изменение положения окна"
+    ATL_IDS_SCMINIMIZE      "Минимизация окна"
+    ATL_IDS_SCMAXIMIZE      "Максимизация окна"
+    ATL_IDS_SCNEXTWINDOW    "Переход к следующему окну"
+    ATL_IDS_SCPREVWINDOW    "Переход к предыдущему окну"
+    ATL_IDS_SCCLOSE         "Закрытие активного окна"
+END
+
+STRINGTABLE 
+BEGIN
+    ATL_IDS_SCRESTORE       "Восстановление размеров окна"
+    ATL_IDS_SCTASKLIST      "Активизация списка задач"
+    ATL_IDS_MDICHILD        "Активизация данного окна"
+END
+
+STRINGTABLE 
+BEGIN
+    ATL_IDS_MRU_FILE        "Открыть этот документ"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_ERROR               "Ошибка"
+    IDS_HELP                "Помощь"
+    IDS_TRANSLATION         "Перевод"
+    IDS_IGNORE              "Игнорирование"
+    IDS_IGNORETEXT          "Игнорируемый текст"
+    IDS_ALL                 "Все"
+    IDS_DONE                "Готово"
+    IDS_BOLD                "Выделенный"
+    IDS_ITALIC              "Курсив"
+    IDS_UNDERLINE           "Подчеркнутый"
+    IDS_STRIKEOUT           "Зачеркнутый"
+    IDS_NEWVERSION          "Вы использовали другую версию Транслитератора.\nДля использования этой версии настройки должны быть сброшены.\nВы хотите использовать эту версию ?"
+    IDS_IMPORT              "Не возможно импортировать"
+    IDS_EXPORT              "Не возможно экспортировать"
+    IDS_TRANSLATEFILES      "Не возможно перевести"
+    IDS_BEGIN               "Начало"
+	IDS_TRANSLITERATOR_IS_RUNNING	"Транслитератор уже запущен"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_END                 "Конец"
+END
+
+#endif    // Russian resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDR_TRANSLITERATOR      "Transliterator"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_NEW             "Create a new document\nNew"
+    ID_FILE_OPEN            "Open an existing document\nOpen"
+    ID_FILE_CLOSE           "Close the active document\nClose"
+    ID_FILE_SAVE            "Save the active document\nSave"
+    ID_FILE_SAVE_AS         "Save the active document with a new name\nSave As"
+    ID_FILE_PAGE_SETUP      "Change the printing options\nPage Setup"
+    ID_FILE_PRINT_SETUP     "Change the printer and printing options\nPrint Setup"
+    ID_FILE_PRINT           "Print the active document\nPrint"
+    ID_FILE_PRINT_PREVIEW   "Display full pages\nPrint Preview"
+END
+
+STRINGTABLE 
+BEGIN
+    ATL_IDS_IDLEMESSAGE     " "
+END
+
+STRINGTABLE 
+BEGIN
+    ID_EDIT_IGNORE_INSERT   "Insert ignore symbols\nInsert ignore"
+    ID_EDIT_IGNORE_REMOVE   "Remove ignore symbols\nRemove ignore"
+    ID_EDIT_COPY_LANGTOPTOLANGBOTTOM 
+                            "Copy text from Top to Bottom\nCopy Top to Bottom"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_EDIT_COPY_LANGBOTTOMTOLANGTOP 
+                            "Copy text from Bottom to Top\nCopy Bottom to Top"
+    ID_TOOLS_PROFILEDETAILS "Show or hide Profile Details window\nProfile Details"
+    ID_TOOLS_TRANSLATEFILES "Show or hide Translate Files window\nTranslate Files"
+    ID_TOOLS_OPTIONS        "Show or hide Options window\nOptions"
+    ID_TOOLS_ACTION_TRANSLITERATION "Enable Tranliteration\nTransliteration"
+    ID_TOOLS_ACTION_IGNORE  "Enable Ignore\nIgnore"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_TOOLS_ACTION_IGNORETEXT "Enable Ignore Text\nIgnore Text"
+    ID_TOOLS_ACTION_COPYIGNORE "Copy Ignore\nCopy Ignore"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_SHOW                 "Show application window\nShow"
+    ID_HIDE                 "Hide application window\nHide"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_APP_ABOUT            "Display program information\nAbout"
+    ID_APP_EXIT             "Quit the application\nExit"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_NEXT_PANE            "Switch to the next window pane\nNext Pane"
+    ID_PREV_PANE            "Switch back to the previous window pane\nPrevious Pane"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_WINDOW_NEW           "Open another window for the active document\nNew Window"
+    ID_WINDOW_ARRANGE       "Arrange icons at the bottom of the window\nArrange Icons"
+    ID_WINDOW_CASCADE       "Arrange windows so they overlap\nCascade Windows"
+    ID_WINDOW_TILE_HORZ     "Arrange windows as non-overlapping tiles\nTile Windows"
+    ID_WINDOW_TILE_VERT     "Arrange windows as non-overlapping tiles\nTile Windows"
+    ID_WINDOW_SPLIT         "Split the active window into panes\nSplit"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_EDIT_CLEAR           "Erase the selection\nErase"
+    ID_EDIT_CLEAR_ALL       "Erase everything\nErase All"
+    ID_EDIT_COPY            "Copy the selection and put it on the Clipboard\nCopy"
+    ID_EDIT_CUT             "Cut the selection and put it on the Clipboard\nCut"
+    ID_EDIT_FIND            "Find the specified text\nFind"
+    ID_EDIT_PASTE           "Insert Clipboard contents\nPaste"
+    ID_EDIT_REPEAT          "Repeat the last action\nRepeat"
+    ID_EDIT_REPLACE         "Replace specific text with different text\nReplace"
+    ID_EDIT_SELECT_ALL      "Select the entire document\nSelect All"
+    ID_EDIT_UNDO            "Undo the last action\nUndo"
+    ID_EDIT_REDO            "Redo the previously undone action\nRedo"
+END
+
+STRINGTABLE 
+BEGIN
+    ATL_IDS_SCSIZE          "Change the window size"
+    ATL_IDS_SCMOVE          "Change the window position"
+    ATL_IDS_SCMINIMIZE      "Reduce the window to an icon"
+    ATL_IDS_SCMAXIMIZE      "Enlarge the window to full size"
+    ATL_IDS_SCNEXTWINDOW    "Switch to the next document window"
+    ATL_IDS_SCPREVWINDOW    "Switch to the previous document window"
+    ATL_IDS_SCCLOSE         "Close the active window"
+END
+
+STRINGTABLE 
+BEGIN
+    ATL_IDS_SCRESTORE       "Restore the window to normal size"
+    ATL_IDS_SCTASKLIST      "Activate Task List"
+    ATL_IDS_MDICHILD        "Activate this window"
+END
+
+STRINGTABLE 
+BEGIN
+    ATL_IDS_MRU_FILE        "Open this document"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_ERROR               "Error"
+    IDS_HELP                "Help"
+    IDS_TRANSLATION         "Translation"
+    IDS_IGNORE              "Ignore"
+    IDS_IGNORETEXT          "Ignore text"
+    IDS_ALL                 "All"
+    IDS_DONE                "Done"
+    IDS_BOLD                "Bold"
+    IDS_ITALIC              "Italic"
+    IDS_UNDERLINE           "Underline"
+    IDS_STRIKEOUT           "StrikeOut"
+    IDS_NEWVERSION          "You have used other version of Transliterator.\nIn order to use this version the settings must be reset\nDo you want to use this version ?"
+    IDS_IMPORT              "Cannot import"
+    IDS_EXPORT              "Cannot export"
+    IDS_TRANSLATEFILES      "Cannot translate"
+    IDS_BEGIN               "Begin"
+	IDS_TRANSLITERATOR_IS_RUNNING	"Transliterator is already runs"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_END                 "End"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+

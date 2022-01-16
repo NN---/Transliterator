@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Translit", "Translit.vcproj", "{C1852571-A0D7-492C-993E-81EA6CE990BC}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{C1852571-A0D7-492C-993E-81EA6CE990BC}.Debug.ActiveCfg = Debug|Win32
+		{C1852571-A0D7-492C-993E-81EA6CE990BC}.Debug.Build.0 = Debug|Win32
+		{C1852571-A0D7-492C-993E-81EA6CE990BC}.Release.ActiveCfg = Release|Win32
+		{C1852571-A0D7-492C-993E-81EA6CE990BC}.Release.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

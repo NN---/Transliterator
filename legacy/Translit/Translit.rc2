@@ -1,0 +1,272 @@
+#ifndef APSTUDIO_INVOKED
+
+CREATEPROCESS_MANIFEST_RESOURCE_ID RT_MANIFEST "res\\Translit.exe.manifest"
+
+#define SUBLANG_LOC                     0x20
+#define SUBLANG_LOC2                    0x21
+
+/////////////////////////////////////////////////////////////////////////////
+// Russian resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_RUS)
+#ifdef _WIN32
+LANGUAGE LANG_RUSSIAN,SUBLANG_DEFAULT+SUBLANG_LOC
+#pragma code_page(1251)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDR_TRANSLIT            "Транслит"
+    IDD_ABOUT               "О Программе"
+    IDD_TRANSLATION         "Перевод"
+    IDD_GENERALPAGE         "Общие"
+	IDD_LAYOUTPAGE			"Расположение"
+    IDD_HOTKEYSPAGE         "Горячие клавиши"
+	IDD_AUTOTRANSLATIONPAGE	"Авто Перевод"
+	IDD_TRANSLATEFILES		"Перевод Файлов"
+    ID_APP_ABOUT            "О &Программе...\tF1"
+    ID_APP_EXIT             "В&ыход\tAlt+F4"
+	ID_TOOLS_TRANSLATEFILES "Перевод &Файлов...\tF5"
+    ID_EDIT_ENG_UNDO        "&Отменить\tCtrl+Z"
+    ID_EDIT_ENG_REDO        "&Повторить\tCtrl+Y"
+    ID_EDIT_ENG_CUT         "&Вырезать\tCtrl+X"
+    ID_EDIT_ENG_COPY        "&Копировать\tCtrl+C"
+    ID_EDIT_ENG_PASTE       "Вст&авить\tCtrl+V"
+    ID_EDIT_ENG_SELECTALL   "Вы&делить Все\tCtrl+A"
+    ID_EDIT_ENG_DELETE      "&Удалить\tDel"
+    ID_EDIT_ENG_DELETEALL   "Удалить В&се"
+    ID_EDIT_RUS_UNDO        "&Отменить\tCtrl+Z"
+    ID_EDIT_RUS_REDO        "&Повторить\tCtrl+Y"
+    ID_EDIT_RUS_CUT         "&Вырезать\tCtrl+X"
+    ID_EDIT_RUS_COPY        "&Копировать\tCtrl+C"
+    ID_EDIT_RUS_PASTE       "Вст&авить\tCtrl+V"
+    ID_EDIT_RUS_SELECTALL   "Вы&делить Все\tCtrl+A"
+    ID_EDIT_RUS_DELETE      "&Удалить\tDel"
+    ID_EDIT_RUS_DELETEALL   "Удалить В&се"
+    ID_TOOLS_OPTIONS      "&Опции...\tF2"
+    ID_TOOLS_LANGUAGE_ENGLISH "&Английский"
+    ID_TOOLS_LANGUAGE_RUSSIAN "&Русский"
+    ID_TOOLS_TRANSLATION     "&П&еревод...\tF3"
+    ID_SHOW                 "&Показать"
+    ID_HIDE                 "&Скрыть"
+    IDC_SABOUT             	"Эта программа бесплатна и предоставлена ""КАК-ЕСТЬ"".\nЯ не несу никакой ответсвенности за ушерб , который может быть нанесен.\nБлагодарности :\nMyxamore6e , Destroer и Shark.\n\nNN."
+	IDC_SABOUTTRANSLIT		"Транслит 4.0 Copyright (C) 2003 - 2004"
+    IDC_STRANSLATION        "Перевод"
+    IDC_SENGTORUS           "Анг. в Рус. :"
+    IDC_SRUSTOENG           "Рус. в Анг. :"
+    IDC_STRANSLIT           "Транслит"
+    IDC_SSHOW               "Показать :"
+    IDC_SHIDE               "Скрыть :"
+    IDC_SCLOSE              "Закрытие"
+    IDC_SFONTS              "Шрифты"
+    IDC_SMINIMIZE           "Минимизация"
+    IDC_STRAYICON           "Иконка"
+    IDC_SSTARTUP            "Запуск"
+    IDC_SENGTEXT            "Английский Текст :"
+    IDC_SRUSTEXT            "Русский Текст :"
+    IDC_EMAIL               "&Эл.Почта : nn-mail@bk.ru"
+    IDC_SITE                "&Сайт : http://our-site.nm.ru"
+    IDOK                    "&OK"
+    IDCANCEL                "&Отмена"
+	IDC_TRAYICONSHOWN 		"Показывать когда программа &видима"
+	IDC_TRAYICONHIDDEN		"Показывать когда программа &скрыта"
+    IDC_ENGFONT             "&Английский"
+    IDC_RUSFONT             "&Русский"
+    IDC_CLOSEEXIT           "В&ыход"
+    IDC_CLOSETOTRAY         "&В Иконку"
+    IDC_MINIMIZENORMAL      "&Обычно"
+    IDC_MINIMIZETOTRAY      "В &Иконку"
+    IDC_LOADONSTARTUP       "&Запускать на старте"
+	ID_TOOLS_CHANGETRANSLATION	"&Изменение Перевода...\tF4"
+	IDC_SENG				"&Анг :"
+	IDC_SRUS				"&Рус :"
+	IDC_STRANSLATE			"Переводить"
+	IDC_COPYNOTTRANSLATE	"&Копировать символы ""Не Перевода"""
+	IDC_SFROM1				"От :"
+	IDC_SFROM2				"От :"
+	IDC_STO1				"До :"
+	IDC_STO2				"До :"
+	IDC_ADD					"&Добавить"
+	IDC_REMOVE				"&Удалить"
+	IDC_CLEAR				"О&чистить"
+	IDC_RESET				"&Сброс"
+	IDC_SNOTTRANSLATE		"Не Переводить"
+	IDC_ENGTORUS			"Анг. в Рус."
+	IDC_RUSTOENG			"Рус. в Анг."
+	IDC_SPATH				"П&уть :"
+	IDC_BROWSE				"..."
+	IDC_SDIRECTORY			"Директория"
+	IDC_FILES				"&Файлы"
+	IDC_DIRECTORIES			"&Директории"
+	IDC_SUBDIRECTORIES		"П&од Директории"
+	IDC_THISDIRECTORY		"&Эта Директория"
+	IDC_SFILE				"Файл"
+	IDC_NAME				"&Имя"
+	IDC_ENTRY				"&Содержание"
+	IDC_MP3TAGS				"&MP3 Теги"
+	IDC_SDIRECTION			"Направление"
+	IDC_TRANSLATE			"&Перевод"
+	IDC_CLOSE				"&Закрыть"
+	IDC_SAUTOTRANSLATION	"Авто Перевода"
+	IDC_SDEFAULTTRANSLATION	"Перевод по умолчанию"
+	ID_EDIT_NOTRANSLATE_SET "&Установить\tCtrl+Shift+1"
+	ID_EDIT_NOTRANSLATE_CLEAR "&Сбросить\tCtrl+Shift+2"
+END
+
+#endif    // Russian resources
+/////////////////////////////////////////////////////////////////////////////
+
+/////////////////////////////////////////////////////////////////////////////
+// Russian resources
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_RUS)
+#ifdef _WIN32
+LANGUAGE LANG_RUSSIAN,SUBLANG_DEFAULT+SUBLANG_LOC2
+#pragma code_page(1251)
+#endif //_WIN32
+STRINGTABLE
+BEGIN
+	IDR_TRANSLIT	"&Транслит\n&Правка\n&Английский\n&Русский\n&Не Переводить\n&Опции\n&Язык\nПо&мощь"
+	IDR_TRAY		"\nЯзык"
+END
+#endif    // Russian resources
+/////////////////////////////////////////////////////////////////////////////
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH,SUBLANG_ENGLISH_US+SUBLANG_LOC
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDR_TRANSLIT            "Translit"
+    IDD_ABOUT               "About"
+    IDD_TRANSLATION         "Translation"
+    IDD_GENERALPAGE         "General"
+	IDD_LAYOUTPAGE			"Layout"
+    IDD_HOTKEYSPAGE         "HotKeys"
+	IDD_AUTOTRANSLATIONPAGE	"Auto Translation"
+	IDD_TRANSLATEFILES		"Translate Files"
+    ID_APP_ABOUT            "&About...\tF1"
+    ID_APP_EXIT             "E&xit\tAlt+F4"
+	ID_TOOLS_TRANSLATEFILES "Translate &Files...\tF5"
+    ID_EDIT_ENG_UNDO        "&Undo\tCtrl+Z"
+    ID_EDIT_ENG_REDO        "&Redo\tCtrl+Y"
+    ID_EDIT_ENG_CUT         "&Cut\tCtrl+X"
+    ID_EDIT_ENG_COPY        "C&opy\tCtrl+C"
+    ID_EDIT_ENG_PASTE       "&Paste\tCtrl+V"
+    ID_EDIT_ENG_SELECTALL   "&Select All\tCtrl+A"
+    ID_EDIT_ENG_DELETE      "&Delete\tDel"
+    ID_EDIT_ENG_DELETEALL   "Delete &All"
+    ID_EDIT_RUS_UNDO        "&Undo\tCtrl+Z"
+    ID_EDIT_RUS_REDO        "&Redo\tCtrl+Y"
+    ID_EDIT_RUS_CUT         "&Cut\tCtrl+X"
+    ID_EDIT_RUS_COPY        "C&opy\tCtrl+C"
+    ID_EDIT_RUS_PASTE       "&Paste\tCtrl+V"
+    ID_EDIT_RUS_SELECTALL   "&Select All\tCtrl+A"
+    ID_EDIT_RUS_DELETE      "&Delete\tDel"
+    ID_EDIT_RUS_DELETEALL   "Delete &All"
+    ID_TOOLS_OPTIONS      "&Options...\tF2"
+    ID_TOOLS_LANGUAGE_ENGLISH "&English"
+    ID_TOOLS_LANGUAGE_RUSSIAN "&Russian"
+    ID_TOOLS_TRANSLATION     "&Translation...\tF3"
+    ID_SHOW                 "&Show"
+    ID_HIDE                 "&Hide"
+	IDC_SABOUT              "This program is freeware and provided ""AS-IS"".\nI take no responsibility for any damage this program cause.\nSpecial thanks to :\nMyxamore6e , Destroer and Shark.\n\nNN."
+	IDC_SABOUTTRANSLIT		"Translit 4.0 Copyright (C) 2003 - 2004"
+    IDC_STRANSLATION        "Translation"
+    IDC_SENGTORUS           "Eng to Rus :"
+    IDC_SRUSTOENG           "Rus to Eng :"
+    IDC_STRANSLIT           "Translit"
+    IDC_SSHOW               "Show :"
+    IDC_SHIDE               "Hide :"
+    IDC_SCLOSE              "Close"
+    IDC_SFONTS              "Fonts"
+    IDC_SMINIMIZE           "Minimize"
+    IDC_STRAYICON           "TrayIcon"
+    IDC_SSTARTUP            "StartUp"
+    IDC_SENGTEXT            "English Text :"
+    IDC_SRUSTEXT            "Russian Text :"
+    IDC_EMAIL               "&E-mail : nn-mail@bk.ru"
+    IDC_SITE                "&Site : http://our-site.nm.ru"
+    IDOK                    "&OK"
+    IDCANCEL                "&Cancel"
+	IDC_TRAYICONSHOWN   	"Show when program is &shown"
+	IDC_TRAYICONHIDDEN	    "Show when program is &hidden"
+    IDC_ENGFONT             "&English"
+    IDC_RUSFONT             "&Russian"
+    IDC_CLOSEEXIT           "E&xit"
+    IDC_CLOSETOTRAY         "&To Tray"
+    IDC_MINIMIZENORMAL      "&Normal"
+    IDC_MINIMIZETOTRAY      "T&o Tray"
+    IDC_LOADONSTARTUP       "&Load on StartUp"
+	ID_TOOLS_CHANGETRANSLATION "&Change Translation...\tF4"
+	IDC_SENG				"&Eng :"
+	IDC_SRUS				"&Rus :"
+	IDC_STRANSLATE			"Translate"
+	IDC_COPYNOTTRANSLATE	"Copy ""&Not Translate"" symbols"
+	IDC_SFROM1				"From :"
+	IDC_SFROM2				"From :"
+	IDC_STO1				"To :"
+	IDC_STO2				"To :"
+	IDC_ADD					"&Add"
+	IDC_REMOVE				"&Remove"
+	IDC_CLEAR				"C&lear"
+	IDC_RESET				"Re&set"
+	IDC_SNOTTRANSLATE		"Not Translate"
+	IDC_ENGTORUS			"Eng to Rus"
+	IDC_RUSTOENG			"Rus to Eng"
+	IDC_SPATH				"&Path :"
+	IDC_BROWSE				"..."
+	IDC_SDIRECTORY			"Directory"
+	IDC_FILES				"&Files"
+	IDC_DIRECTORIES			"&Directories"
+	IDC_SUBDIRECTORIES		"&SubDirectories"
+	IDC_THISDIRECTORY		"T&his Directory"
+	IDC_SFILE				"File"
+	IDC_NAME				"&Name"
+	IDC_ENTRY				"&Entry"
+	IDC_MP3TAGS				"&MP3 Tags"
+	IDC_SDIRECTION			"Direction"
+	IDC_TRANSLATE			"&Translate"
+	IDC_CLOSE				"&Close"
+	IDC_SAUTOTRANSLATION	"Auto Translation"
+	IDC_SDEFAULTTRANSLATION	"Default Translation"
+	ID_EDIT_NOTRANSLATE_SET "&Set\tCtrl+Shift+1"
+	ID_EDIT_NOTRANSLATE_CLEAR "&Clear\tCtrl+Shift+2"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH,SUBLANG_ENGLISH_US+SUBLANG_LOC2
+#pragma code_page(1252)
+#endif //_WIN32
+STRINGTABLE
+BEGIN
+	IDR_TRANSLIT	"&Translit\n&Edit\n&English\n&Russian\n&No Translate\n&Options\n&Language\n&Help"
+	IDR_TRAY		"\nLanguage"
+END
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+#endif //!APSTUDIO_INVOKED

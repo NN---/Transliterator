@@ -1,0 +1,5 @@
+#include "stdafx.hpp"
+#include "resource.hpp"
+#include "language.hpp"
+#include "settings.hpp"
+#include "options_general_page.hpp"

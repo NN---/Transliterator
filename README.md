@@ -1,3 +1,7 @@
+![306995208](https://user-images.githubusercontent.com/580536/149656754-76af39a5-9e25-4f1d-bf9a-4691884fbb2c.jpg)
+![400073976](https://user-images.githubusercontent.com/580536/149656761-32155888-e81d-4ad1-ab47-3306ac3a56aa.jpg)
+![742407993](https://user-images.githubusercontent.com/580536/149656759-1939a481-1f2b-4d94-bcda-8458348d5f72.jpg)
+
 # Преамбула
 
 Программа была выложена давно и с тех пор не поддерживается.  
